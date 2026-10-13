@@ -117,7 +117,16 @@ def publish_to_github(stamp, repo_root, branch):
         raise RuntimeError("не удалось проверить подготовленные изменения Git.")
 
     commit_message = f"Update Adopt Me values ({stamp})"
-    run_git(["commit", "-m", commit_message, "--", *paths], repo_root)
+    commit_args = ["commit", "-m", commit_message, "--", *paths]
+    author = run_git(["var", "GIT_AUTHOR_IDENT"], repo_root, check=False)
+    if author.returncode:
+        # Use a clearly named automation identity without changing global Git config.
+        commit_args = [
+            "-c", "user.name=Adopt Me Values Scraper",
+            "-c", "user.email=scraper@users.noreply.github.com",
+            *commit_args,
+        ]
+    run_git(commit_args, repo_root)
     run_git(["push", GIT_REMOTE, f"HEAD:refs/heads/{branch}"], repo_root)
     print(f"GitHub: файлы оценок отправлены в {GIT_REMOTE}/{branch}.")
 
