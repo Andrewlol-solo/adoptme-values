@@ -167,7 +167,8 @@ def pick(item, fields):
         v = to_num(item.get(f))
         if v is not None:
             return v
-    return None
+    # Non-pet sections expose a single generic value instead of pet variant fields.
+    return to_num(item.get("value"))
 
 
 def old_total():
