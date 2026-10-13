@@ -1,6 +1,8 @@
 import json
+import math
 import os
 import re
+import shutil
 import sys
 import subprocess
 import time
@@ -26,7 +28,11 @@ SECTIONS = {
 }
 EXTRA_PAGES = ["/calculator"]   # предметы, которых нет в списках разделов
 
-# файл, variant_key (как в AMTradeCalc.lua), поля сайта по приоритету
+# Файл, variant_key (как в AMTradeCalc.lua), поля сайта по приоритету.
+# На сайте обычный показ использует regularValue/neonValue/megaValue; кнопка
+# Baseless переключает на np*Value, если у предмета есть отдельная оценка.
+# Для F/R вариантов отдельное поле тоже может отсутствовать: тогда оценка
+# совпадает с обычной оценкой, поэтому regularValue/neonValue/megaValue — fallback.
 VARIANTS = [
     ("values_base.json",    "Base",    ["npRegularValue", "regularValue"]),
     ("values_f.json",       "F",       ["fValue", "regularValue"]),
@@ -44,6 +50,7 @@ VARIANTS = [
 
 ALL_FILE = "values_all.json"
 GIT_REMOTE = "origin"
+EXPECTED_GITHUB_REMOTE = "https://github.com/Andrewlol-solo/adoptme-values"
 MIN_RATIO = 0.7
 SCRIPT_DIR = Path(__file__).resolve().parent
 HEADERS = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
@@ -71,42 +78,60 @@ def run_git(args, cwd, check=True):
     return result
 
 
+def normalize_remote(url):
+    value = url.strip()
+    value = re.sub(r"^git@github\.com:", "https://github.com/", value, flags=re.I)
+    value = re.sub(r"^ssh://git@github\.com/", "https://github.com/", value, flags=re.I)
+    if value.lower().endswith(".git"):
+        value = value[:-4]
+    return value.rstrip("/").lower()
+
+
 def github_target():
-    try:
-        root = Path(run_git(["rev-parse", "--show-toplevel"], SCRIPT_DIR).stdout.strip()).resolve()
-    except RuntimeError as e:
-        raise RuntimeError(
-            "папка scraper.py не находится в Git-репозитории. Клонируй репозиторий GitHub "
-            "и помести туда скрипт и файлы values_*.json."
-        ) from e
-
-    try:
-        run_git(["remote", "get-url", "--push", GIT_REMOTE], root)
-    except RuntimeError as e:
-        raise RuntimeError(
-            f"не настроен remote {GIT_REMOTE!r}. Добавь его командой "
-            "git remote add origin <URL_твоего_GitHub-репозитория>."
-        ) from e
-
-    try:
-        branch = run_git(["symbolic-ref", "--quiet", "--short", "HEAD"], root).stdout.strip()
-    except RuntimeError as e:
-        raise RuntimeError("Git находится в detached HEAD; переключись на ветку перед запуском.") from e
-
-    if not branch:
-        raise RuntimeError("не удалось определить текущую Git-ветку.")
-    return root, branch
+    # The double-click launcher and scheduled task live in ../scraper, while the
+    # user's GitHub clone is its sibling ../adoptme-values. Find that exact repo
+    # instead of requiring the launcher folder itself to be a Git checkout.
+    candidates = (SCRIPT_DIR, SCRIPT_DIR.parent / "adoptme-values")
+    seen = set()
+    for candidate in candidates:
+        try:
+            root = Path(run_git(["rev-parse", "--show-toplevel"], candidate).stdout.strip()).resolve()
+        except RuntimeError:
+            continue
+        if root in seen:
+            continue
+        seen.add(root)
+        try:
+            remote = run_git(["remote", "get-url", "--push", GIT_REMOTE], root).stdout.strip()
+        except RuntimeError:
+            continue
+        if normalize_remote(remote) != EXPECTED_GITHUB_REMOTE.lower():
+            continue
+        try:
+            branch = run_git(["symbolic-ref", "--quiet", "--short", "HEAD"], root).stdout.strip()
+        except RuntimeError as e:
+            raise RuntimeError("Git находится в detached HEAD; переключись на ветку перед запуском.") from e
+        if branch:
+            return root, branch
+    raise RuntimeError(
+        "не найден клон GitHub Andrewlol-solo/adoptme-values. Ожидается папка "
+        "adoptme-values рядом с папкой scraper и настроенный remote origin."
+    )
 
 
 def publish_to_github(stamp, repo_root, branch):
     generated_files = [ALL_FILE, *(fname for fname, _, _ in VARIANTS)]
-    try:
-        paths = [
-            (SCRIPT_DIR / filename).resolve().relative_to(repo_root).as_posix()
-            for filename in generated_files
-        ]
-    except ValueError as e:
-        raise RuntimeError("сгенерированные файлы находятся за пределами Git-репозитория.") from e
+    if SCRIPT_DIR.resolve() != repo_root.resolve():
+        try:
+            for filename in generated_files:
+                source = SCRIPT_DIR / filename
+                if not source.is_file():
+                    raise RuntimeError(f"не найден сгенерированный файл {filename}.")
+                shutil.copy2(source, repo_root / filename)
+        except OSError as e:
+            raise RuntimeError(f"не удалось скопировать файлы оценок в GitHub-клон: {e}") from e
+        print("GitHub: файлы оценок скопированы из папки запуска в клон репозитория.")
+    paths = [filename for filename in generated_files]
 
     run_git(["add", "--", *paths], repo_root)
     diff = run_git(["diff", "--cached", "--quiet", "--", *paths], repo_root, check=False)
@@ -165,10 +190,13 @@ def extract_items(html):
 
 
 def to_num(v):
+    if isinstance(v, bool):
+        return None
     try:
-        return float(v)
+        number = float(v)
     except (TypeError, ValueError):
         return None
+    return number if math.isfinite(number) and number >= 0 else None
 
 
 def pick(item, fields):
@@ -176,7 +204,10 @@ def pick(item, fields):
         v = to_num(item.get(f))
         if v is not None:
             return v
-    # Non-pet sections expose a single generic value instead of pet variant fields.
+    # The generic field belongs to non-pet pages. Never let it silently replace a
+    # missing pet variant value, or a site schema change could price every pet as FR.
+    if item.get("_category") == "Pets":
+        return None
     return to_num(item.get("value"))
 
 
