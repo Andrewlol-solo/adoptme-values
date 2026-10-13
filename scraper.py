@@ -26,7 +26,7 @@ SECTIONS = {
     "stickers": ("/values/stickers", "Stickers"),
     "houses": ("/values/houses", "Houses"),
 }
-EXTRA_PAGES = ["/calculator"]   # предметы, которых нет в списках разделов
+CALCULATOR_PAGE = "/calculator"  # основной каталог всех предметов и variant-specific values
 
 # Файл, variant_key (как в AMTradeCalc.lua), поля сайта по приоритету.
 # На сайте обычный показ использует regularValue/neonValue/megaValue; кнопка
@@ -121,17 +121,18 @@ def github_target():
 
 def publish_to_github(stamp, repo_root, branch):
     generated_files = [ALL_FILE, *(fname for fname, _, _ in VARIANTS)]
+    repo_files = ["scraper.py", *generated_files]
     if SCRIPT_DIR.resolve() != repo_root.resolve():
         try:
-            for filename in generated_files:
+            for filename in repo_files:
                 source = SCRIPT_DIR / filename
                 if not source.is_file():
-                    raise RuntimeError(f"не найден сгенерированный файл {filename}.")
+                    raise RuntimeError(f"не найден файл для публикации {filename}.")
                 shutil.copy2(source, repo_root / filename)
         except OSError as e:
-            raise RuntimeError(f"не удалось скопировать файлы оценок в GitHub-клон: {e}") from e
-        print("GitHub: файлы оценок скопированы из папки запуска в клон репозитория.")
-    paths = [filename for filename in generated_files]
+            raise RuntimeError(f"не удалось скопировать парсер и файлы оценок в GitHub-клон: {e}") from e
+        print("GitHub: парсер и файлы оценок скопированы в клон репозитория.")
+    paths = repo_files
 
     run_git(["add", "--", *paths], repo_root)
     diff = run_git(["diff", "--cached", "--quiet", "--", *paths], repo_root, check=False)
@@ -229,26 +230,55 @@ def main():
         sys.exit(1)
 
     items, expected = {}, {}
-    pages = [(s, p, c) for s, (p, c) in SECTIONS.items()] + [("extra", p, "Other") for p in EXTRA_PAGES]
+    failed_sections = []
+    # The calculator is the user's chosen source of truth and contains the full catalog.
+    # Fetch it first so its non-empty values win; section pages then fill missing metadata
+    # and assign readable category names. This also preserves section-page fallback if the
+    # calculator temporarily fails to load.
+    pages = [("calculator", CALCULATOR_PAGE, "Other")] + [
+        (s, p, c) for s, (p, c) in SECTIONS.items()
+    ]
     for section, path, category in pages:
         html = fetch(path)
         found = extract_items(html)
+        if section in SECTIONS and not found:
+            failed_sections.append(section)
         m = EXPECT_RE.search(html)
         if m and section in SECTIONS:
             expected[section] = int(m.group(1))
-        new = 0
+        new, enriched = 0, 0
         for it in found:
-            if it["id"] not in items:
+            previous = items.get(it["id"])
+            if previous is None:
                 it["_category"] = category
                 items[it["id"]] = it
                 new += 1
-        print(f"[{section}] на странице {len(found)}, новых {new}"
+                continue
+
+            # Calculator values have precedence. Section pages only fill fields that
+            # the calculator omitted, while still providing the readable category.
+            changed = False
+            for key, value in it.items():
+                if key == "_category":
+                    continue
+                if value is not None and previous.get(key) is None:
+                    previous[key] = value
+                    changed = True
+            if category != "Other" and previous.get("_category") != category:
+                previous["_category"] = category
+                changed = True
+            if changed:
+                enriched += 1
+        print(f"[{section}] на странице {len(found)}, новых {new}, дополнено {enriched}"
               + (f", сайт заявляет {expected[section]}" if section in expected else ""))
 
     by_cat = Counter(i["_category"] for i in items.values())
     short = [s for s, n in expected.items() if by_cat.get(SECTIONS[s][1], 0) < n]
     if short:
         print("ВНИМАНИЕ, собрано меньше, чем заявлено:", ", ".join(short))
+    if failed_sections:
+        print("СТОП: не удалось прочитать разделы", ", ".join(failed_sections), ". Файлы не публикуются.")
+        sys.exit(1)
     if not items:
         print("СТОП: ничего не найдено, формат страницы мог измениться.")
         sys.exit(1)
