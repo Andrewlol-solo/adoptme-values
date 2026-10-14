@@ -211,10 +211,27 @@ def to_num(v):
     return number if math.isfinite(number) and number >= 0 else None
 
 
+def pick_base_pet(item):
+    """Project the ordinary pet price from the raw calculator record.
+
+    The calculator's npRegularValue is authoritative when present. A lone
+    regularValue is shared with Base only when the source publishes no potion
+    siblings at all; partial variant data must never be guessed.
+    """
+    explicit = to_num(item.get("npRegularValue"))
+    if explicit is not None:
+        return explicit
+    if any(to_num(item.get(key)) is not None for key in PET_VARIANT_SIBLINGS["npRegularValue"]):
+        return None
+    return to_num(item.get("regularValue"))
+
+
 def pick(item, fields):
     if item.get("_category") == "Pets":
         if not fields:
             return None
+        if fields[0] == "npRegularValue":
+            return pick_base_pet(item)
         value = to_num(item.get(fields[0]))
         if value is not None:
             return value
@@ -231,6 +248,28 @@ def pick(item, fields):
         if v is not None:
             return v
     return to_num(item.get("value"))
+
+
+def verify_base_projection(items, categories):
+    """Check that values_base is an exact projection of raw values_all pet fields."""
+    expected = {}
+    for item in sorted(items.values(), key=lambda row: row["name"]):
+        if item.get("_category") != "Pets":
+            continue
+        value = pick_base_pet(item)
+        if value is not None:
+            expected.setdefault(item["name"], value)
+
+    actual = categories.get("Pets", {})
+    mismatches = [
+        (name, value, actual.get(name))
+        for name, value in expected.items()
+        if actual.get(name) != value
+    ]
+    if mismatches:
+        sample = ", ".join(f"{name}: expected {want}, got {got}" for name, want, got in mismatches[:5])
+        raise RuntimeError(f"values_base.json не совпадает с обычными ценами values_all.json ({sample})")
+    return len(expected)
 
 
 def old_total():
@@ -315,10 +354,9 @@ def main():
     if extra:
         print(f"Предметы только из калькулятора (категория Other): {len(extra)}, например: {extra[:15]}")
 
-    stamp = datetime.now(timezone.utc).isoformat(timespec="seconds")
-    with open(ALL_FILE, "w", encoding="utf-8") as f:
-        json.dump({"updated": stamp, "items": items}, f, ensure_ascii=False, indent=1)
-
+    # Build every output in memory first; verify the Base pet prices against the
+    # raw calculator records before replacing any of the generated files.
+    variant_outputs = {}
     for fname, vkey, fields in VARIANTS:
         cats = {}
         for it in sorted(items.values(), key=lambda x: x["name"]):
@@ -330,10 +368,20 @@ def main():
                 print(f"! дубль '{it['name']}' в {it['_category']}, берём первый")
                 continue
             bucket[it["name"]] = val
+        variant_outputs[fname] = (vkey, cats)
+
+    verified_base_pets = verify_base_projection(items, variant_outputs["values_base.json"][1])
+    stamp = datetime.now(timezone.utc).isoformat(timespec="seconds")
+    with open(ALL_FILE, "w", encoding="utf-8") as f:
+        json.dump({"updated": stamp, "items": items}, f, ensure_ascii=False, indent=1)
+
+    for fname, _, _ in VARIANTS:
+        vkey, cats = variant_outputs[fname]
         with open(fname, "w", encoding="utf-8") as f:
             json.dump({"variant_key": vkey, "updated": stamp, "categories": cats},
                       f, ensure_ascii=False, indent=1)
         print(f"{fname}: {sum(len(v) for v in cats.values())}")
+    print(f"Проверка Base: {verified_base_pets} цен питомцев перенесены из полей values_all и сверены.")
 
     pet_items = [it for it in items.values() if it.get("_category") == "Pets"]
     explicit_base = sum(1 for it in pet_items if to_num(it.get("npRegularValue")) is not None)
