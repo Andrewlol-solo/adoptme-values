@@ -28,23 +28,21 @@ SECTIONS = {
 }
 CALCULATOR_PAGE = "/calculator"  # основной каталог всех предметов и variant-specific values
 
-# Файл, variant_key (как в AMTradeCalc.lua), поля сайта по приоритету.
-# Для питомцев regularValue/neonValue/megaValue — стандартная оценка.
-# Явные np*/fValue/rValue важнее. Если в источнике вообще нет ни одной отдельной
-# оценки вариантов этой формы, используем единственную опубликованную цену как общую.
-# Если часть вариантов задана, а нужный вариант пропущен, цену не угадываем.
+# Файл, variant_key (как в AMTradeCalc.lua), точные поля сайта для варианта.
+# Для питомцев regularValue/neonValue/megaValue — цены FR; цены без зелий находятся
+# в npRegularValue/npNeonValue/npMegaValue. Отсутствующую цену нельзя подменять FR.
 VARIANTS = [
-    ("values_base.json",    "Base",    ["npRegularValue", "regularValue"]),
-    ("values_f.json",       "F",       ["fValue", "regularValue"]),
-    ("values_r.json",       "R",       ["rValue", "regularValue"]),
+    ("values_base.json",    "Base",    ["npRegularValue"]),
+    ("values_f.json",       "F",       ["fValue"]),
+    ("values_r.json",       "R",       ["rValue"]),
     ("values_fr.json",      "FR",      ["regularValue"]),
-    ("values_neon.json",    "Neon",    ["npNeonValue", "neonValue"]),
-    ("values_neon_f.json",  "Neon|F",  ["nfValue", "neonValue"]),
-    ("values_neon_r.json",  "Neon|R",  ["nrValue", "neonValue"]),
+    ("values_neon.json",    "Neon",    ["npNeonValue"]),
+    ("values_neon_f.json",  "Neon|F",  ["nfValue"]),
+    ("values_neon_r.json",  "Neon|R",  ["nrValue"]),
     ("values_neon_fr.json", "Neon|FR", ["neonValue"]),
-    ("values_mega.json",    "Mega",    ["npMegaValue", "megaValue"]),
-    ("values_mega_f.json",  "Mega|F",  ["mfValue", "megaValue"]),
-    ("values_mega_r.json",  "Mega|R",  ["mrValue", "megaValue"]),
+    ("values_mega.json",    "Mega",    ["npMegaValue"]),
+    ("values_mega_f.json",  "Mega|F",  ["mfValue"]),
+    ("values_mega_r.json",  "Mega|R",  ["mrValue"]),
     ("values_mega_fr.json", "Mega|FR", ["megaValue"]),
 ]
 
@@ -52,17 +50,6 @@ ALL_FILE = "values_all.json"
 GIT_REMOTE = "origin"
 EXPECTED_GITHUB_REMOTE = "https://github.com/Andrewlol-solo/adoptme-values"
 MIN_RATIO = 0.7
-PET_VARIANT_SIBLINGS = {
-    "npRegularValue": ("fValue", "rValue"),
-    "fValue": ("npRegularValue", "rValue"),
-    "rValue": ("npRegularValue", "fValue"),
-    "npNeonValue": ("nfValue", "nrValue"),
-    "nfValue": ("npNeonValue", "nrValue"),
-    "nrValue": ("npNeonValue", "nfValue"),
-    "npMegaValue": ("mfValue", "mrValue"),
-    "mfValue": ("npMegaValue", "mrValue"),
-    "mrValue": ("npMegaValue", "mfValue"),
-}
 SCRIPT_DIR = Path(__file__).resolve().parent
 HEADERS = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
                          "(KHTML, like Gecko) Chrome/130.0 Safari/537.36"}
@@ -212,18 +199,8 @@ def to_num(v):
 
 
 def pick_base_pet(item):
-    """Project the ordinary pet price from the raw calculator record.
-
-    The calculator's npRegularValue is authoritative when present. A lone
-    regularValue is shared with Base only when the source publishes no potion
-    siblings at all; partial variant data must never be guessed.
-    """
-    explicit = to_num(item.get("npRegularValue"))
-    if explicit is not None:
-        return explicit
-    if any(to_num(item.get(key)) is not None for key in PET_VARIANT_SIBLINGS["npRegularValue"]):
-        return None
-    return to_num(item.get("regularValue"))
+    """Return only AMVGG's explicit no-potion price; regularValue is FR."""
+    return to_num(item.get("npRegularValue"))
 
 
 def pick(item, fields):
@@ -232,17 +209,9 @@ def pick(item, fields):
             return None
         if fields[0] == "npRegularValue":
             return pick_base_pet(item)
-        value = to_num(item.get(fields[0]))
-        if value is not None:
-            return value
-        # A missing field can mean the source publishes only one common value for
-        # that form. Reuse it only when none of the sibling potion variants exist.
-        # If the source has partial variant data, leave this variant unpriced instead
-        # of silently substituting a potentially incorrect FR/default value.
-        siblings = PET_VARIANT_SIBLINGS.get(fields[0])
-        if siblings and not any(to_num(item.get(key)) is not None for key in siblings):
-            return to_num(item.get(fields[1])) if len(fields) > 1 else None
-        return None
+        # AMVGG's pet cards default to FR. Never reuse that value for F/R/Base
+        # when a separate source field is missing.
+        return to_num(item.get(fields[0]))
     for f in fields:
         v = to_num(item.get(f))
         if v is not None:
@@ -262,9 +231,9 @@ def verify_base_projection(items, categories):
 
     actual = categories.get("Pets", {})
     mismatches = [
-        (name, value, actual.get(name))
-        for name, value in expected.items()
-        if actual.get(name) != value
+        (name, expected.get(name), actual.get(name))
+        for name in sorted(set(expected) | set(actual))
+        if expected.get(name) != actual.get(name)
     ]
     if mismatches:
         sample = ", ".join(f"{name}: expected {want}, got {got}" for name, want, got in mismatches[:5])
@@ -344,7 +313,7 @@ def main():
         sys.exit(1)
     prev = old_total()
     # Validate catalog extraction against the site's regular/FR field, not Base:
-    # some pet variants share one common source value while others have explicit variants.
+    # many pets have no published no-potion field, so Base must not use regularValue.
     source_price_total = len([1 for it in items.values() if pick(it, VARIANTS[3][2]) is not None])
     if prev and source_price_total < prev * MIN_RATIO:
         print(f"СТОП: с ценой источника {source_price_total} против {prev} раньше. Файлы не тронуты.")
@@ -385,17 +354,11 @@ def main():
 
     pet_items = [it for it in items.values() if it.get("_category") == "Pets"]
     explicit_base = sum(1 for it in pet_items if to_num(it.get("npRegularValue")) is not None)
-    common_base = sum(
-        1 for it in pet_items
-        if to_num(it.get("npRegularValue")) is None
-        and not any(to_num(it.get(k)) is not None for k in PET_VARIANT_SIBLINGS["npRegularValue"])
-        and to_num(it.get("regularValue")) is not None
-    )
     missing_base = sum(
         1 for it in items.values()
         if it.get("_category") == "Pets" and pick(it, VARIANTS[0][2]) is None
     )
-    print(f"Base цены питомцев: {explicit_base} отдельных + {common_base} общих; без доступной цены: {missing_base}.")
+    print(f"Base цены питомцев: {explicit_base} явно опубликованы; без опубликованной цены: {missing_base}.")
     if missing_base:
         print(f"ВНИМАНИЕ: для {missing_base} питомцев нет Base-цены, и источник не позволяет безопасно её восстановить.")
 
