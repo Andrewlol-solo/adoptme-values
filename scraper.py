@@ -28,9 +28,9 @@ SECTIONS = {
 }
 CALCULATOR_PAGE = "/calculator"  # основной каталог всех предметов и variant-specific values
 
-# Файл, variant_key (как в AMTradeCalc.lua), точные поля сайта для варианта.
-# Для питомцев regularValue/neonValue/megaValue — цены FR; цены без зелий находятся
-# в npRegularValue/npNeonValue/npMegaValue. Отсутствующую цену нельзя подменять FR.
+# Файл и variant_key (как в AMTradeCalc.lua). Для питомцев итоговая цена берётся
+# прямо из карточки AMVGG после нажатия F/R/N/M: часть цен сайт вычисляет на клиенте,
+# даже когда соответствующего поля нет в исходной записи.
 VARIANTS = [
     ("values_base.json",    "Base",    ["npRegularValue"]),
     ("values_f.json",       "F",       ["fValue"]),
@@ -46,7 +46,35 @@ VARIANTS = [
     ("values_mega_fr.json", "Mega|FR", ["megaValue"]),
 ]
 
+PET_VARIANT_STATES = {
+    "Base":     [False, False, False, False],
+    "F":        [True,  False, False, False],
+    "R":        [False, True,  False, False],
+    "FR":       [True,  True,  False, False],
+    "Neon":     [False, False, True,  False],
+    "Neon|F":   [True,  False, True,  False],
+    "Neon|R":   [False, True,  True,  False],
+    "Neon|FR":  [True,  True,  True,  False],
+    "Mega":     [False, False, False, True],
+    "Mega|F":   [True,  False, False, True],
+    "Mega|R":   [False, True,  False, True],
+    "Mega|FR":  [True,  True,  False, True],
+}
+
+# Gray-code-like order reduces button changes. Repeat Base/FR only to move between
+# the regular, Neon, and Mega groups while keeping each card's state predictable.
+PET_VARIANT_SEQUENCE = [
+    "FR", "F", "Base", "R", "FR",
+    "Neon", "Neon|F", "Neon|FR", "Neon|R", "Neon", "Base",
+    "Mega", "Mega|F", "Mega|FR", "Mega|R", "Mega",
+]
+PET_VARIANT_BY_FIELD = {
+    fields[0]: variant_key
+    for _, variant_key, fields in VARIANTS
+}
+
 ALL_FILE = "values_all.json"
+DEPENDENCY_FILE = "requirements.txt"
 GIT_REMOTE = "origin"
 EXPECTED_GITHUB_REMOTE = "https://github.com/Andrewlol-solo/adoptme-values"
 MIN_RATIO = 0.7
@@ -119,7 +147,7 @@ def github_target():
 
 def publish_to_github(stamp, repo_root, branch):
     generated_files = [ALL_FILE, *(fname for fname, _, _ in VARIANTS)]
-    repo_files = ["scraper.py", *generated_files]
+    repo_files = ["scraper.py", DEPENDENCY_FILE, *generated_files]
     if SCRIPT_DIR.resolve() != repo_root.resolve():
         try:
             for filename in repo_files:
@@ -198,8 +226,254 @@ def to_num(v):
     return number if math.isfinite(number) and number >= 0 else None
 
 
+def scrape_pet_card_variants(expected_count):
+    """Read all 12 displayed variants by toggling each pet card's F/R/N/M buttons."""
+    try:
+        from selenium import webdriver
+        from selenium.common.exceptions import TimeoutException
+        from selenium.webdriver.support.ui import WebDriverWait
+    except ImportError as e:
+        raise RuntimeError(
+            "Для считывания кнопок F/R/N/M нужен Selenium. Установи зависимости: "
+            "python -m pip install -r requirements.txt"
+        ) from e
+
+    if not expected_count:
+        raise RuntimeError("Сайт не сообщил число питомцев; безопасно сверить карточки нельзя.")
+
+    options = webdriver.ChromeOptions()
+    options.page_load_strategy = "eager"
+    options.add_argument("--headless=new")
+    options.add_argument("--disable-gpu")
+    options.add_argument("--disable-dev-shm-usage")
+    options.add_argument("--no-first-run")
+    options.add_argument("--window-size=1920,1080")
+    options.add_argument("--lang=en-US")
+    for base_dir in (
+        os.environ.get("ProgramFiles"),
+        os.environ.get("ProgramFiles(x86)"),
+        os.environ.get("LOCALAPPDATA"),
+    ):
+        if not base_dir:
+            continue
+        chrome = Path(base_dir) / "Google" / "Chrome" / "Application" / "chrome.exe"
+        if chrome.is_file():
+            options.binary_location = str(chrome)
+            break
+
+    driver = None
+    try:
+        driver = webdriver.Chrome(options=options)
+        driver.set_page_load_timeout(90)
+        driver.set_script_timeout(600)
+        try:
+            driver.get(BASE + "/values/pets")
+        except TimeoutException:
+            # Ads or analytics can keep loading after the public pet cards are ready.
+            pass
+
+        wait = WebDriverWait(driver, 90)
+        wait.until(lambda d: d.execute_script("return document.readyState") != "loading")
+        wait.until(lambda d: d.execute_script(
+            "return document.querySelectorAll('main a[href^=\"/pet/\"]').length"
+        ) > 0)
+        count = driver.execute_script(
+            "return document.querySelectorAll('main a[href^=\"/pet/\"]').length"
+        )
+        if count != expected_count:
+            raise RuntimeError(
+                f"На странице AMVGG найдено {count} карточек питомцев, "
+                f"а раздел сайта сообщает {expected_count}. Файлы не будут заменены."
+            )
+
+        print(f"AMVGG: переключаю F/R/N/M у {count} карточек питомцев…")
+        script = r"""
+            const expectedCount = arguments[0];
+            const sequence = arguments[1];
+            const states = arguments[2];
+            const finish = arguments[arguments.length - 1];
+            const selector = 'main a[href^="/pet/"]';
+            const labels = ['Toggle Fly', 'Toggle Ride', 'Toggle Neon', 'Toggle Mega'];
+            const linksNow = () => Array.from(document.querySelectorAll(selector));
+            const waitForPaint = () => new Promise(resolve =>
+                requestAnimationFrame(() => requestAnimationFrame(resolve)));
+            const cardAt = index => linksNow()[index]?.parentElement;
+            const stateOf = card => labels.map(label => {
+                const button = card.querySelector(`button[aria-label="${label}"]`);
+                if (!button) throw new Error(`Не найдена кнопка ${label}`);
+                return button.classList.contains('text-white');
+            });
+            const valueOf = card => {
+                const label = Array.from(card.querySelectorAll('span'))
+                    .find(element => element.textContent.trim() === 'Value');
+                const value = label?.nextElementSibling?.textContent.trim() || '';
+                return /^[0-9]+(?:\.[0-9]+)?$/.test(value) ? value : null;
+            };
+            (async () => {
+                try {
+                    let links = linksNow();
+                    if (links.length !== expectedCount) {
+                        throw new Error(`Карточек в DOM: ${links.length}, ожидалось: ${expectedCount}`);
+                    }
+                    // Confirm React has attached handlers before trying to collect values.
+                    const probe = links[0].parentElement.querySelector('button[aria-label="Toggle Fly"]');
+                    if (!probe) throw new Error('У первой карточки нет кнопки Toggle Fly');
+                    const initialProbeState = probe.classList.contains('text-white');
+                    let interactive = false;
+                    for (let attempt = 0; attempt < 20; attempt++) {
+                        const currentProbe = linksNow()[0].parentElement.querySelector('button[aria-label="Toggle Fly"]');
+                        currentProbe.click();
+                        await waitForPaint();
+                        const updatedProbe = linksNow()[0].parentElement.querySelector('button[aria-label="Toggle Fly"]');
+                        if (updatedProbe.classList.contains('text-white') !== initialProbeState) {
+                            interactive = true;
+                            updatedProbe.click();
+                            await waitForPaint();
+                            break;
+                        }
+                        await new Promise(resolve => setTimeout(resolve, 250));
+                    }
+                    if (!interactive) throw new Error('Кнопки карточки не активировались после загрузки страницы');
+                    links = linksNow();
+                    const names = links.map((link, index) => {
+                        const card = link.parentElement;
+                        const heading = card?.querySelector('h2');
+                        if (!heading) throw new Error(`У карточки ${index + 1} нет названия`);
+                        return heading.textContent.trim();
+                    });
+                    const prices = {};
+                    for (const key of sequence) {
+                        const target = states[key];
+                        if (!target) throw new Error(`Неизвестная комбинация ${key}`);
+                        links = linksNow();
+                        for (let index = 0; index < links.length; index++) {
+                            const card = links[index].parentElement;
+                            for (let buttonIndex = 0; buttonIndex < labels.length; buttonIndex++) {
+                                const button = card.querySelector(`button[aria-label="${labels[buttonIndex]}"]`);
+                                if (!button) throw new Error(`${names[index]}: не найдена кнопка ${labels[buttonIndex]}`);
+                                if (button.classList.contains('text-white') !== target[buttonIndex]) {
+                                    button.click();
+                                }
+                            }
+                        }
+                        let stateMismatch = null;
+                        for (let attempt = 0; attempt < 20; attempt++) {
+                            await waitForPaint();
+                            links = linksNow();
+                            stateMismatch = null;
+                            for (let index = 0; index < links.length; index++) {
+                                const actual = stateOf(links[index].parentElement);
+                                if (actual.some((value, i) => value !== target[i])) {
+                                    stateMismatch = {name: names[index], actual};
+                                    break;
+                                }
+                            }
+                            if (!stateMismatch) break;
+                            await new Promise(resolve => setTimeout(resolve, 50));
+                        }
+                        if (stateMismatch) {
+                            throw new Error(`${stateMismatch.name}: ${key} ожидал ${JSON.stringify(target)}, ` +
+                                `получил ${JSON.stringify(stateMismatch.actual)}`);
+                        }
+                        links = linksNow();
+                        const values = [];
+                        for (let index = 0; index < links.length; index++) {
+                            const card = links[index].parentElement;
+                            const value = valueOf(card);
+                            if (value === null) throw new Error(`${names[index]}: цена ${key} не отображается`);
+                            values.push(value);
+                        }
+                        if (!(key in prices)) prices[key] = values;
+                    }
+
+                    // Leave this temporary browser in the page's familiar FR state.
+                    links = linksNow();
+                    const restore = states['FR'];
+                    for (let index = 0; index < links.length; index++) {
+                        const card = links[index].parentElement;
+                        for (let buttonIndex = 0; buttonIndex < labels.length; buttonIndex++) {
+                            const button = card.querySelector(`button[aria-label="${labels[buttonIndex]}"]`);
+                            if (button && button.classList.contains('text-white') !== restore[buttonIndex]) button.click();
+                        }
+                    }
+                    await waitForPaint();
+                    finish({names, prices});
+                } catch (error) {
+                    finish({error: String(error), stack: error?.stack || ''});
+                }
+            })();
+        """
+        result = driver.execute_async_script(
+            script, expected_count, PET_VARIANT_SEQUENCE, PET_VARIANT_STATES
+        )
+        if not isinstance(result, dict) or result.get("error"):
+            detail = result.get("error", "неожиданный ответ браузера") if isinstance(result, dict) else repr(result)
+            raise RuntimeError(f"Не удалось прочитать цены с карточек AMVGG: {detail}")
+        names = result.get("names", [])
+        if len(names) != expected_count:
+            raise RuntimeError(f"Браузер вернул {len(names)} названий вместо {expected_count}.")
+        values = result.get("prices", {})
+        for _, variant_key, _ in VARIANTS:
+            rows = values.get(variant_key)
+            if not isinstance(rows, list) or len(rows) != expected_count:
+                raise RuntimeError(f"Для варианта {variant_key} получено неполное число цен.")
+            if any(to_num(value) is None for value in rows):
+                raise RuntimeError(f"Для варианта {variant_key} сайт показал некорректную цену.")
+        return names, values
+    except RuntimeError:
+        raise
+    except Exception as e:
+        raise RuntimeError(
+            "Не удалось открыть карточки AMVGG в headless Chrome. Проверь Chrome, "
+            f"интернет и установленные зависимости. Подробности: {e}"
+        ) from e
+    finally:
+        if driver is not None:
+            driver.quit()
+
+
+def apply_pet_card_variants(items, expected_count):
+    pets = [item for item in items.values() if item.get("_category") == "Pets"]
+    if len(pets) != expected_count:
+        raise RuntimeError(
+            f"В каталоге собрано {len(pets)} питомцев, сайт заявляет {expected_count}. "
+            "Файлы не будут заменены."
+        )
+
+    by_name = {}
+    duplicates = []
+    for item in pets:
+        if item["name"] in by_name:
+            duplicates.append(item["name"])
+        else:
+            by_name[item["name"]] = item
+    if duplicates:
+        raise RuntimeError("Повторяются названия питомцев: " + ", ".join(duplicates[:10]))
+
+    names, values = scrape_pet_card_variants(expected_count)
+    if len(set(names)) != len(names):
+        raise RuntimeError("В карточках AMVGG повторяются названия питомцев.")
+    missing = sorted(set(by_name) - set(names))
+    unexpected = sorted(set(names) - set(by_name))
+    if missing or unexpected:
+        raise RuntimeError(
+            "Состав питомцев в карточках AMVGG не совпадает с данными раздела. "
+            f"Нет карточек: {missing[:8]}; лишние карточки: {unexpected[:8]}."
+        )
+
+    for index, name in enumerate(names):
+        by_name[name]["amvggCardVariants"] = {
+            variant_key: to_num(values[variant_key][index])
+            for _, variant_key, _ in VARIANTS
+        }
+    return len(pets)
+
+
 def pick_base_pet(item):
-    """Return only AMVGG's explicit no-potion price; regularValue is FR."""
+    """Return the no-potion price displayed by the AMVGG card."""
+    card_values = item.get("amvggCardVariants")
+    if isinstance(card_values, dict) and "Base" in card_values:
+        return to_num(card_values["Base"])
     return to_num(item.get("npRegularValue"))
 
 
@@ -207,10 +481,12 @@ def pick(item, fields):
     if item.get("_category") == "Pets":
         if not fields:
             return None
-        if fields[0] == "npRegularValue":
-            return pick_base_pet(item)
-        # AMVGG's pet cards default to FR. Never reuse that value for F/R/Base
-        # when a separate source field is missing.
+        variant_key = PET_VARIANT_BY_FIELD.get(fields[0])
+        card_values = item.get("amvggCardVariants")
+        if variant_key and isinstance(card_values, dict) and variant_key in card_values:
+            return to_num(card_values[variant_key])
+        # Preserve the exact source field only if browser collection was unavailable.
+        # The normal run stops before writing when that collection fails.
         return to_num(item.get(fields[0]))
     for f in fields:
         v = to_num(item.get(f))
@@ -219,26 +495,25 @@ def pick(item, fields):
     return to_num(item.get("value"))
 
 
-def verify_base_projection(items, categories):
-    """Check that values_base is an exact projection of raw values_all pet fields."""
-    expected = {}
-    for item in sorted(items.values(), key=lambda row: row["name"]):
-        if item.get("_category") != "Pets":
-            continue
-        value = pick_base_pet(item)
-        if value is not None:
-            expected.setdefault(item["name"], value)
-
-    actual = categories.get("Pets", {})
-    mismatches = [
-        (name, expected.get(name), actual.get(name))
-        for name in sorted(set(expected) | set(actual))
-        if expected.get(name) != actual.get(name)
-    ]
-    if mismatches:
-        sample = ", ".join(f"{name}: expected {want}, got {got}" for name, want, got in mismatches[:5])
-        raise RuntimeError(f"values_base.json не совпадает с обычными ценами values_all.json ({sample})")
-    return len(expected)
+def verify_pet_variant_projection(items, variant_outputs):
+    """Require every generated pet price to match the exact card-toggle result."""
+    pets = [item for item in items.values() if item.get("_category") == "Pets"]
+    for fname, variant_key, _ in VARIANTS:
+        actual = variant_outputs[fname][1].get("Pets", {})
+        missing = [item["name"] for item in pets if item["name"] not in actual]
+        mismatched = [
+            item["name"] for item in pets
+            if item["name"] in actual
+            and actual[item["name"]] != to_num(item.get("amvggCardVariants", {}).get(variant_key))
+        ]
+        if missing or mismatched:
+            details = []
+            if missing:
+                details.append(f"нет цен у {len(missing)} питомцев: {missing[:5]}")
+            if mismatched:
+                details.append(f"не совпадают {len(mismatched)}: {mismatched[:5]}")
+            raise RuntimeError(f"Проверка {fname} не прошла: " + "; ".join(details))
+    return len(pets)
 
 
 def old_total():
@@ -304,16 +579,23 @@ def main():
     by_cat = Counter(i["_category"] for i in items.values())
     short = [s for s, n in expected.items() if by_cat.get(SECTIONS[s][1], 0) < n]
     if short:
-        print("ВНИМАНИЕ, собрано меньше, чем заявлено:", ", ".join(short))
+        print("СТОП: собрано меньше, чем заявлено по разделам:", ", ".join(short), ". Файлы не тронуты.")
+        sys.exit(1)
     if failed_sections:
         print("СТОП: не удалось прочитать разделы", ", ".join(failed_sections), ". Файлы не публикуются.")
         sys.exit(1)
     if not items:
         print("СТОП: ничего не найдено, формат страницы мог измениться.")
         sys.exit(1)
+
+    try:
+        verified_pet_count = apply_pet_card_variants(items, expected.get("pets"))
+    except RuntimeError as e:
+        print(f"СТОП: {e} Файлы не тронуты.")
+        sys.exit(1)
+
     prev = old_total()
-    # Validate catalog extraction against the site's regular/FR field, not Base:
-    # many pets have no published no-potion field, so Base must not use regularValue.
+    # Validate the full catalog count after reading the pet-card UI variants.
     source_price_total = len([1 for it in items.values() if pick(it, VARIANTS[3][2]) is not None])
     if prev and source_price_total < prev * MIN_RATIO:
         print(f"СТОП: с ценой источника {source_price_total} против {prev} раньше. Файлы не тронуты.")
@@ -323,8 +605,8 @@ def main():
     if extra:
         print(f"Предметы только из калькулятора (категория Other): {len(extra)}, например: {extra[:15]}")
 
-    # Build every output in memory first; verify the Base pet prices against the
-    # raw calculator records before replacing any of the generated files.
+    # Build every output in memory first; verify every pet variant against the
+    # value displayed by the corresponding AMVGG card before writing files.
     variant_outputs = {}
     for fname, vkey, fields in VARIANTS:
         cats = {}
@@ -339,7 +621,7 @@ def main():
             bucket[it["name"]] = val
         variant_outputs[fname] = (vkey, cats)
 
-    verified_base_pets = verify_base_projection(items, variant_outputs["values_base.json"][1])
+    verified_pet_count = verify_pet_variant_projection(items, variant_outputs)
     stamp = datetime.now(timezone.utc).isoformat(timespec="seconds")
     with open(ALL_FILE, "w", encoding="utf-8") as f:
         json.dump({"updated": stamp, "items": items}, f, ensure_ascii=False, indent=1)
@@ -350,17 +632,15 @@ def main():
             json.dump({"variant_key": vkey, "updated": stamp, "categories": cats},
                       f, ensure_ascii=False, indent=1)
         print(f"{fname}: {sum(len(v) for v in cats.values())}")
-    print(f"Проверка Base: {verified_base_pets} цен питомцев перенесены из полей values_all и сверены.")
+    print(f"Проверка карточек: цены всех 12 вариантов сверены для {verified_pet_count} питомцев.")
 
     pet_items = [it for it in items.values() if it.get("_category") == "Pets"]
     explicit_base = sum(1 for it in pet_items if to_num(it.get("npRegularValue")) is not None)
-    missing_base = sum(
-        1 for it in items.values()
-        if it.get("_category") == "Pets" and pick(it, VARIANTS[0][2]) is None
-    )
-    print(f"Base цены питомцев: {explicit_base} явно опубликованы; без опубликованной цены: {missing_base}.")
+    missing_base = sum(1 for it in pet_items if pick(it, VARIANTS[0][2]) is None)
+    print(f"Base цены питомцев: {verified_pet_count - missing_base} считаны с карточек; "
+          f"явное поле npRegularValue было у {explicit_base}.")
     if missing_base:
-        print(f"ВНИМАНИЕ: для {missing_base} питомцев нет Base-цены, и источник не позволяет безопасно её восстановить.")
+        print(f"ВНИМАНИЕ: {missing_base} карточек не показали Base-цену.")
 
     print("По категориям:", dict(by_cat))
     if short:
