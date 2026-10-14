@@ -29,10 +29,10 @@ SECTIONS = {
 CALCULATOR_PAGE = "/calculator"  # основной каталог всех предметов и variant-specific values
 
 # Файл, variant_key (как в AMTradeCalc.lua), поля сайта по приоритету.
-# На сайте обычный показ использует regularValue/neonValue/megaValue; кнопка
-# Baseless переключает на np*Value, если у предмета есть отдельная оценка.
-# Для F/R вариантов отдельное поле тоже может отсутствовать: тогда оценка
-# совпадает с обычной оценкой, поэтому regularValue/neonValue/megaValue — fallback.
+# Для питомцев regularValue/neonValue/megaValue — это стандартная (FR) оценка.
+# Base и однопотовые варианты берём только из их явных полей: подстановка
+# regularValue при отсутствии np*/fValue/rValue тихо записывала FR как обычную цену.
+# У непитомых предметов вариантов зелий нет, поэтому для них оставляем общий fallback.
 VARIANTS = [
     ("values_base.json",    "Base",    ["npRegularValue", "regularValue"]),
     ("values_f.json",       "F",       ["fValue", "regularValue"]),
@@ -201,14 +201,14 @@ def to_num(v):
 
 
 def pick(item, fields):
+    if item.get("_category") == "Pets":
+        # For pets each output is a distinct potion state. Missing state-specific data
+        # must stay missing; regularValue is the site's FR/default value, not Base.
+        return to_num(item.get(fields[0])) if fields else None
     for f in fields:
         v = to_num(item.get(f))
         if v is not None:
             return v
-    # The generic field belongs to non-pet pages. Never let it silently replace a
-    # missing pet variant value, or a site schema change could price every pet as FR.
-    if item.get("_category") == "Pets":
-        return None
     return to_num(item.get("value"))
 
 
@@ -283,9 +283,12 @@ def main():
         print("СТОП: ничего не найдено, формат страницы мог измениться.")
         sys.exit(1)
     prev = old_total()
-    base_total = len([1 for it in items.values() if pick(it, VARIANTS[0][2]) is not None])
-    if prev and base_total < prev * MIN_RATIO:
-        print(f"СТОП: с ценой {base_total} против {prev} раньше. Файлы не тронуты.")
+    # Validate catalog extraction against the site's regular/FR field, not Base:
+    # AMVGG publishes explicit no-potion prices for only a subset of pets, so a
+    # correct sparse Base file must not look like an incomplete scrape.
+    source_price_total = len([1 for it in items.values() if pick(it, VARIANTS[3][2]) is not None])
+    if prev and source_price_total < prev * MIN_RATIO:
+        print(f"СТОП: с ценой источника {source_price_total} против {prev} раньше. Файлы не тронуты.")
         sys.exit(1)
 
     extra = [it["name"] for it in items.values() if it["_category"] == "Other"]
@@ -311,6 +314,14 @@ def main():
             json.dump({"variant_key": vkey, "updated": stamp, "categories": cats},
                       f, ensure_ascii=False, indent=1)
         print(f"{fname}: {sum(len(v) for v in cats.values())}")
+
+    missing_base = sum(
+        1 for it in items.values()
+        if it.get("_category") == "Pets" and pick(it, VARIANTS[0][2]) is None
+    )
+    if missing_base:
+        print(f"ВНИМАНИЕ: у {missing_base} питомцев сайт не дал явную цену Base (npRegularValue); "
+              "они не записаны с FR-ценой.")
 
     print("По категориям:", dict(by_cat))
     if short:
