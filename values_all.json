@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-15T12:04:17+00:00",
+ "updated": "2026-10-15T15:04:44+00:00",
  "items": {
   "64c48cd3137ba4f492f3aff1": {
    "id": "64c48cd3137ba4f492f3aff1",
@@ -177,14 +177,14 @@
     "F": 0.027,
     "R": 0.026,
     "FR": 0.03,
-    "Neon": 0.1035,
-    "Neon|F": 0.1121,
-    "Neon|R": 0.1093,
-    "Neon|FR": 0.115,
-    "Mega": 0.4485,
-    "Mega|F": 0.4563,
-    "Mega|R": 0.4531,
-    "Mega|FR": 0.46
+    "Neon": 0.099,
+    "Neon|F": 0.1073,
+    "Neon|R": 0.1045,
+    "Neon|FR": 0.11,
+    "Mega": 0.429,
+    "Mega|F": 0.4365,
+    "Mega|R": 0.4334,
+    "Mega|FR": 0.44
    }
   },
   "64ca7c756c83cdf46c57fc4b": {
@@ -741,10 +741,10 @@
     "Neon|F": 0.1261,
     "Neon|R": 0.1248,
     "Neon|FR": 0.13,
-    "Mega": 0.483,
-    "Mega|F": 0.4554,
-    "Mega|R": 0.4508,
-    "Mega|FR": 0.46
+    "Mega": 0.4987,
+    "Mega|F": 0.4703,
+    "Mega|R": 0.4655,
+    "Mega|FR": 0.475
    }
   },
   "64e1710b72ae2045fa3ce7f4": {
@@ -1325,14 +1325,14 @@
     "F": 0.088,
     "R": 0.086,
     "FR": 0.09,
-    "Neon": 0.3589,
-    "Neon|F": 0.3663,
-    "Neon|R": 0.3626,
-    "Neon|FR": 0.37,
-    "Mega": 1.575,
-    "Mega|F": 1.5,
-    "Mega|R": 1.5,
-    "Mega|FR": 1.5
+    "Neon": 0.3541,
+    "Neon|F": 0.3614,
+    "Neon|R": 0.3577,
+    "Neon|FR": 0.365,
+    "Mega": 1.5488,
+    "Mega|F": 1.475,
+    "Mega|R": 1.475,
+    "Mega|FR": 1.475
    }
   },
   "66d1d2b9b9644fc052b8dc10": {
@@ -1437,14 +1437,14 @@
     "F": 0.03,
     "R": 0.029,
     "FR": 0.0325,
-    "Neon": 0.1156,
-    "Neon|F": 0.1213,
-    "Neon|R": 0.12,
-    "Neon|FR": 0.125,
-    "Mega": 0.5145,
-    "Mega|F": 0.4851,
-    "Mega|R": 0.4802,
-    "Mega|FR": 0.49
+    "Neon": 0.1133,
+    "Neon|F": 0.1188,
+    "Neon|R": 0.1176,
+    "Neon|FR": 0.1225,
+    "Mega": 0.4987,
+    "Mega|F": 0.4703,
+    "Mega|R": 0.4655,
+    "Mega|FR": 0.475
    }
   },
   "650415ded8bdca356ab99561": {
@@ -3802,18 +3802,18 @@
    "origin": "Jungle Zone",
    "lastUpdatedAt": "$D2026-10-14T14:58:19.497Z",
    "amvggCardVariants": {
-    "Base": 0.044,
-    "F": 0.051,
-    "R": 0.05,
-    "FR": 0.055,
-    "Neon": 0.2138,
-    "Neon|F": 0.2205,
-    "Neon|R": 0.2194,
-    "Neon|FR": 0.225,
-    "Mega": 0.925,
-    "Mega|F": 0.925,
-    "Mega|R": 0.925,
-    "Mega|FR": 0.925
+    "Base": 0.048,
+    "F": 0.055,
+    "R": 0.054,
+    "FR": 0.06,
+    "Neon": 0.228,
+    "Neon|F": 0.2352,
+    "Neon|R": 0.234,
+    "Neon|FR": 0.24,
+    "Mega": 0.975,
+    "Mega|F": 0.975,
+    "Mega|R": 0.975,
+    "Mega|FR": 0.975
    }
   },
   "653526f994eac817d6b6745b": {
@@ -3890,14 +3890,14 @@
     "F": 0.194,
     "R": 0.19,
     "FR": 0.1975,
-    "Neon": 0.5335,
-    "Neon|F": 0.5445,
-    "Neon|R": 0.539,
-    "Neon|FR": 0.55,
-    "Mega": 2.0738,
-    "Mega|F": 1.975,
-    "Mega|R": 1.975,
-    "Mega|FR": 1.975
+    "Neon": 0.5238,
+    "Neon|F": 0.5346,
+    "Neon|R": 0.5292,
+    "Neon|FR": 0.54,
+    "Mega": 2.0213,
+    "Mega|F": 1.925,
+    "Mega|R": 1.925,
+    "Mega|FR": 1.925
    }
   },
   "660fc9ae062c95790ffa01d3": {
@@ -4570,14 +4570,14 @@
     "F": 0.035,
     "R": 0.034,
     "FR": 0.0375,
-    "Neon": 0.1401,
-    "Neon|F": 0.1445,
-    "Neon|R": 0.1438,
-    "Neon|FR": 0.1475,
-    "Mega": 0.6195,
-    "Mega|F": 0.59,
-    "Mega|R": 0.59,
-    "Mega|FR": 0.59
+    "Neon": 0.1377,
+    "Neon|F": 0.1421,
+    "Neon|R": 0.1414,
+    "Neon|FR": 0.145,
+    "Mega": 0.6038,
+    "Mega|F": 0.575,
+    "Mega|R": 0.575,
+    "Mega|FR": 0.575
    }
   },
   "64c9136ae48791d45f23c989": {
@@ -6016,14 +6016,14 @@
     "F": 0.093,
     "R": 0.091,
     "FR": 0.095,
-    "Neon": 0.3783,
-    "Neon|F": 0.3861,
-    "Neon|R": 0.3822,
-    "Neon|FR": 0.39,
-    "Mega": 1.6538,
-    "Mega|F": 1.575,
-    "Mega|R": 1.575,
-    "Mega|FR": 1.575
+    "Neon": 0.3735,
+    "Neon|F": 0.3812,
+    "Neon|R": 0.3773,
+    "Neon|FR": 0.385,
+    "Mega": 1.6275,
+    "Mega|F": 1.55,
+    "Mega|R": 1.55,
+    "Mega|FR": 1.55
    }
   },
   "64c5bd4f2ecb6add46f2469b": {
@@ -8057,14 +8057,14 @@
     "F": 0.207,
     "R": 0.207,
     "FR": 0.2125,
-    "Neon": 0.64,
-    "Neon|F": 0.64,
-    "Neon|R": 0.64,
-    "Neon|FR": 0.64,
-    "Mega": 2.5725,
-    "Mega|F": 2.45,
-    "Mega|R": 2.45,
-    "Mega|FR": 2.45
+    "Neon": 0.63,
+    "Neon|F": 0.63,
+    "Neon|R": 0.63,
+    "Neon|FR": 0.63,
+    "Mega": 2.52,
+    "Mega|F": 2.4,
+    "Mega|R": 2.4,
+    "Mega|FR": 2.4
    }
   },
   "67fd283babae89b678a25c9a": {
@@ -8266,29 +8266,29 @@
   "650000771ab1ddbdcd94e6eb": {
    "id": "650000771ab1ddbdcd94e6eb",
    "name": "Wolpertinger",
-   "category": 2,
-   "regularValue": "0.00375",
-   "neonValue": "0.0075",
-   "megaValue": "0.0225",
+   "category": 1,
+   "regularValue": "0.0035",
+   "neonValue": "0.007",
+   "megaValue": "0.02",
    "regularDemand": "Low",
    "neonDemand": "Low",
    "megaDemand": "Low",
    "_category": "Pets",
    "origin": "Mythic Egg",
-   "lastUpdatedAt": "$D2026-09-07T20:22:12.118Z",
+   "lastUpdatedAt": "$D2026-10-15T13:48:47.385Z",
    "amvggCardVariants": {
-    "Base": 0.00038,
-    "F": 0.0023,
-    "R": 0.002,
-    "FR": 0.00375,
-    "Neon": 0.0032,
-    "Neon|F": 0.006,
-    "Neon|R": 0.0056,
-    "Neon|FR": 0.0075,
-    "Mega": 0.0146,
-    "Mega|F": 0.0182,
-    "Mega|R": 0.0169,
-    "Mega|FR": 0.0225
+    "Base": 0.00028,
+    "F": 0.0021,
+    "R": 0.0018,
+    "FR": 0.0035,
+    "Neon": 0.0025,
+    "Neon|F": 0.0055,
+    "Neon|R": 0.0051,
+    "Neon|FR": 0.007,
+    "Mega": 0.011,
+    "Mega|F": 0.016,
+    "Mega|R": 0.0135,
+    "Mega|FR": 0.02
    }
   },
   "65ad0eb42fbde2e079f30e98": {
@@ -8957,18 +8957,18 @@
    "origin": "Lunar New Year (2024)",
    "lastUpdatedAt": "$D2026-10-14T15:15:38.559Z",
    "amvggCardVariants": {
-    "Base": 0.014,
-    "F": 0.017,
-    "R": 0.016,
-    "FR": 0.019,
-    "Neon": 0.0682,
-    "Neon|F": 0.0736,
-    "Neon|R": 0.0721,
-    "Neon|FR": 0.0775,
-    "Mega": 0.3007,
-    "Mega|F": 0.3069,
-    "Mega|R": 0.3038,
-    "Mega|FR": 0.31
+    "Base": 0.015,
+    "F": 0.018,
+    "R": 0.017,
+    "FR": 0.02,
+    "Neon": 0.0704,
+    "Neon|F": 0.076,
+    "Neon|R": 0.0744,
+    "Neon|FR": 0.08,
+    "Mega": 0.3153,
+    "Mega|F": 0.3218,
+    "Mega|R": 0.3185,
+    "Mega|FR": 0.325
    }
   },
   "6611f523ab1b3d08c0ce2aa4": {
@@ -12668,18 +12668,18 @@
    "origin": "Winter Festival (2023)",
    "lastUpdatedAt": "$D2026-10-14T15:16:58.527Z",
    "amvggCardVariants": {
-    "Base": 0.029,
-    "F": 0.034,
-    "R": 0.033,
-    "FR": 0.0365,
-    "Neon": 0.1401,
-    "Neon|F": 0.1445,
-    "Neon|R": 0.1438,
-    "Neon|FR": 0.1475,
-    "Mega": 0.61,
-    "Mega|F": 0.61,
-    "Mega|R": 0.61,
-    "Mega|FR": 0.61
+    "Base": 0.03,
+    "F": 0.035,
+    "R": 0.034,
+    "FR": 0.0375,
+    "Neon": 0.1425,
+    "Neon|F": 0.147,
+    "Neon|R": 0.1463,
+    "Neon|FR": 0.15,
+    "Mega": 0.625,
+    "Mega|F": 0.625,
+    "Mega|R": 0.625,
+    "Mega|FR": 0.625
    }
   },
   "65cb71777ca8946035cc571e": {
@@ -12948,18 +12948,18 @@
    "origin": "Butterfly Sanctuary",
    "lastUpdatedAt": "$D2026-10-14T15:15:56.641Z",
    "amvggCardVariants": {
-    "Base": 0.665,
-    "F": 0.672,
-    "R": 0.668,
-    "FR": 0.675,
-    "Neon": 2.65,
-    "Neon|F": 2.65,
-    "Neon|R": 2.65,
-    "Neon|FR": 2.65,
-    "Mega": 10.66,
-    "Mega|F": 10.4,
-    "Mega|R": 10.4,
-    "Mega|FR": 10.4
+    "Base": 0.66,
+    "F": 0.667,
+    "R": 0.663,
+    "FR": 0.67,
+    "Neon": 2.625,
+    "Neon|F": 2.625,
+    "Neon|R": 2.625,
+    "Neon|FR": 2.625,
+    "Mega": 10.5063,
+    "Mega|F": 10.25,
+    "Mega|R": 10.25,
+    "Mega|FR": 10.25
    }
   },
   "678234933c4d0d73e8b64626": {
@@ -13960,14 +13960,14 @@
     "F": 0.073,
     "R": 0.071,
     "FR": 0.075,
-    "Neon": 0.265,
-    "Neon|F": 0.261,
-    "Neon|R": 0.2597,
-    "Neon|FR": 0.265,
-    "Mega": 1.1019,
-    "Mega|F": 1.025,
-    "Mega|R": 1.025,
-    "Mega|FR": 1.025
+    "Neon": 0.26,
+    "Neon|F": 0.2561,
+    "Neon|R": 0.2548,
+    "Neon|FR": 0.26,
+    "Mega": 1.075,
+    "Mega|F": 1.0,
+    "Mega|R": 1.0,
+    "Mega|FR": 1.0
    }
   },
   "64c5e8bce4b5a4535e9f65ab": {
@@ -15561,18 +15561,18 @@
    "origin": "Event Stand",
    "lastUpdatedAt": "$D2026-10-14T15:00:04.186Z",
    "amvggCardVariants": {
-    "Base": 0.122,
-    "F": 0.127,
-    "R": 0.125,
-    "FR": 0.13,
-    "Neon": 0.4947,
-    "Neon|F": 0.5049,
-    "Neon|R": 0.4998,
-    "Neon|FR": 0.51,
-    "Mega": 2.1263,
-    "Mega|F": 2.025,
-    "Mega|R": 2.025,
-    "Mega|FR": 2.025
+    "Base": 0.127,
+    "F": 0.132,
+    "R": 0.13,
+    "FR": 0.135,
+    "Neon": 0.5141,
+    "Neon|F": 0.5247,
+    "Neon|R": 0.5194,
+    "Neon|FR": 0.53,
+    "Mega": 2.205,
+    "Mega|F": 2.1,
+    "Mega|R": 2.1,
+    "Mega|FR": 2.1
    }
   },
   "64cef8c12446bd991c4ed3c7": {
@@ -15785,18 +15785,18 @@
    "origin": "Halloween Event (2023)",
    "lastUpdatedAt": "$D2026-10-14T14:54:49.773Z",
    "amvggCardVariants": {
-    "Base": 0.022,
-    "F": 0.026,
-    "R": 0.025,
-    "FR": 0.0285,
-    "Neon": 0.1035,
-    "Neon|F": 0.1121,
-    "Neon|R": 0.1093,
-    "Neon|FR": 0.115,
-    "Mega": 0.4485,
-    "Mega|F": 0.4563,
-    "Mega|R": 0.4531,
-    "Mega|FR": 0.46
+    "Base": 0.021,
+    "F": 0.025,
+    "R": 0.024,
+    "FR": 0.0275,
+    "Neon": 0.099,
+    "Neon|F": 0.1073,
+    "Neon|R": 0.1045,
+    "Neon|FR": 0.11,
+    "Mega": 0.429,
+    "Mega|F": 0.4365,
+    "Mega|R": 0.4334,
+    "Mega|FR": 0.44
    }
   },
   "655f191502d07691dfd3f330": {
@@ -16761,14 +16761,14 @@
     "F": 1.095,
     "R": 1.095,
     "FR": 1.1,
-    "Neon": 3.875,
-    "Neon|F": 3.85,
-    "Neon|R": 3.85,
-    "Neon|FR": 3.85,
-    "Mega": 14.95,
-    "Mega|F": 14.5,
-    "Mega|R": 14.5,
-    "Mega|FR": 14.45
+    "Neon": 3.825,
+    "Neon|F": 3.8,
+    "Neon|R": 3.8,
+    "Neon|FR": 3.8,
+    "Mega": 14.8,
+    "Mega|F": 14.35,
+    "Mega|R": 14.35,
+    "Mega|FR": 14.3
    }
   },
   "65054272b704b49b5ecd5da8": {
@@ -17489,14 +17489,14 @@
     "F": 0.046,
     "R": 0.045,
     "FR": 0.05,
-    "Neon": 0.19,
-    "Neon|F": 0.196,
-    "Neon|R": 0.195,
-    "Neon|FR": 0.2,
-    "Mega": 0.82,
-    "Mega|F": 0.82,
-    "Mega|R": 0.82,
-    "Mega|FR": 0.82
+    "Neon": 0.1947,
+    "Neon|F": 0.2009,
+    "Neon|R": 0.1999,
+    "Neon|FR": 0.205,
+    "Mega": 0.84,
+    "Mega|F": 0.84,
+    "Mega|R": 0.84,
+    "Mega|FR": 0.84
    }
   },
   "67a0a61724f815546f60a95e": {
@@ -18319,14 +18319,14 @@
     "F": 1.195,
     "R": 1.195,
     "FR": 1.2,
-    "Neon": 4.2,
-    "Neon|F": 4.175,
-    "Neon|R": 4.175,
-    "Neon|FR": 4.175,
-    "Mega": 16.7,
-    "Mega|F": 16.5,
-    "Mega|R": 16.5,
-    "Mega|FR": 16.5
+    "Neon": 4.15,
+    "Neon|F": 4.125,
+    "Neon|R": 4.125,
+    "Neon|FR": 4.125,
+    "Mega": 16.5,
+    "Mega|F": 16.35,
+    "Mega|R": 16.35,
+    "Mega|FR": 16.3
    }
   },
   "68c57828f9a418ea3b4b0197": {
@@ -18375,14 +18375,14 @@
     "F": 0.063,
     "R": 0.062,
     "FR": 0.065,
-    "Neon": 0.2304,
-    "Neon|F": 0.2364,
-    "Neon|R": 0.2352,
-    "Neon|FR": 0.24,
-    "Mega": 0.96,
-    "Mega|F": 0.96,
-    "Mega|R": 0.96,
-    "Mega|FR": 0.96
+    "Neon": 0.2256,
+    "Neon|F": 0.2315,
+    "Neon|R": 0.2303,
+    "Neon|FR": 0.235,
+    "Mega": 0.94,
+    "Mega|F": 0.94,
+    "Mega|R": 0.94,
+    "Mega|FR": 0.94
    }
   },
   "68e00ac85ddab6f21778bbb0": {
@@ -20175,14 +20175,14 @@
     "F": 0.071,
     "R": 0.069,
     "FR": 0.0725,
-    "Neon": 0.2016,
-    "Neon|F": 0.2068,
-    "Neon|R": 0.2058,
-    "Neon|FR": 0.21,
-    "Mega": 0.76,
-    "Mega|F": 0.76,
-    "Mega|R": 0.76,
-    "Mega|FR": 0.76
+    "Neon": 0.2064,
+    "Neon|F": 0.2118,
+    "Neon|R": 0.2107,
+    "Neon|FR": 0.215,
+    "Mega": 0.8,
+    "Mega|F": 0.8,
+    "Mega|R": 0.8,
+    "Mega|FR": 0.8
    }
   },
   "69b44a25fc680d64e0e86b18": {
@@ -22382,18 +22382,18 @@
    "_category": "Pets",
    "lastUpdatedAt": "$D2026-10-14T15:06:27.108Z",
    "amvggCardVariants": {
-    "Base": 0.061,
-    "F": 0.066,
-    "R": 0.064,
-    "FR": 0.0675,
-    "Neon": 0.2592,
-    "Neon|F": 0.266,
-    "Neon|R": 0.2646,
-    "Neon|FR": 0.27,
-    "Mega": 1.1,
-    "Mega|F": 1.1,
-    "Mega|R": 1.1,
-    "Mega|FR": 1.1
+    "Base": 0.046,
+    "F": 0.053,
+    "R": 0.052,
+    "FR": 0.0575,
+    "Neon": 0.2209,
+    "Neon|F": 0.2279,
+    "Neon|R": 0.2267,
+    "Neon|FR": 0.2325,
+    "Mega": 0.95,
+    "Mega|F": 0.95,
+    "Mega|R": 0.95,
+    "Mega|FR": 0.95
    }
   },
   "6ac1475927f127cc0e89167c": {
@@ -22534,82 +22534,82 @@
   "6ac90b8027f127cc0e891720": {
    "id": "6ac90b8027f127cc0e891720",
    "name": "Bobageist",
-   "category": 2,
-   "regularValue": "0.004",
-   "neonValue": "0.008",
-   "megaValue": "0.025",
+   "category": 1,
+   "regularValue": "0.00375",
+   "neonValue": "0.0075",
+   "megaValue": "0.0225",
    "regularDemand": "Low",
    "neonDemand": "Low",
    "megaDemand": "Low",
    "_category": "Pets",
-   "lastUpdatedAt": "$D2026-10-14T15:21:25.560Z",
+   "lastUpdatedAt": "$D2026-10-15T11:47:44.823Z",
    "amvggCardVariants": {
-    "Base": 0.0004,
-    "F": 0.0025,
-    "R": 0.0021,
-    "FR": 0.004,
-    "Neon": 0.0034,
-    "Neon|F": 0.0064,
-    "Neon|R": 0.006,
-    "Neon|FR": 0.008,
-    "Mega": 0.0163,
-    "Mega|F": 0.0203,
-    "Mega|R": 0.0188,
-    "Mega|FR": 0.025
+    "Base": 0.0003,
+    "F": 0.0023,
+    "R": 0.0019,
+    "FR": 0.00375,
+    "Neon": 0.0026,
+    "Neon|F": 0.0059,
+    "Neon|R": 0.0054,
+    "Neon|FR": 0.0075,
+    "Mega": 0.0124,
+    "Mega|F": 0.018,
+    "Mega|R": 0.0152,
+    "Mega|FR": 0.0225
    }
   },
   "6ac90bd227f127cc0e891721": {
    "id": "6ac90bd227f127cc0e891721",
    "name": "Bubblegeist",
-   "category": 7,
-   "regularValue": "0.0065",
-   "neonValue": "0.015",
-   "megaValue": "0.06",
+   "category": 5,
+   "regularValue": "0.00625",
+   "neonValue": "0.0125",
+   "megaValue": "0.05",
    "regularDemand": "Low",
    "neonDemand": "Low",
    "megaDemand": "Low",
    "_category": "Pets",
-   "lastUpdatedAt": "$D2026-10-14T15:19:33.384Z",
+   "lastUpdatedAt": "$D2026-10-15T11:46:54.764Z",
    "amvggCardVariants": {
-    "Base": 0.0029,
-    "F": 0.005,
-    "R": 0.0047,
-    "FR": 0.0065,
-    "Neon": 0.0113,
-    "Neon|F": 0.0137,
-    "Neon|R": 0.0135,
-    "Neon|FR": 0.015,
-    "Mega": 0.051,
-    "Mega|F": 0.057,
-    "Mega|R": 0.0552,
-    "Mega|FR": 0.06
+    "Base": 0.0013,
+    "F": 0.0045,
+    "R": 0.0042,
+    "FR": 0.00625,
+    "Neon": 0.0084,
+    "Neon|F": 0.0104,
+    "Neon|R": 0.0103,
+    "Neon|FR": 0.0125,
+    "Mega": 0.0388,
+    "Mega|F": 0.0445,
+    "Mega|R": 0.0425,
+    "Mega|FR": 0.05
    }
   },
   "6ac9170e27f127cc0e891722": {
    "id": "6ac9170e27f127cc0e891722",
    "name": "Skelicorn",
-   "category": 7,
-   "regularValue": "0.00675",
-   "neonValue": "0.0175",
-   "megaValue": "0.07",
+   "category": 5,
+   "regularValue": "0.006",
+   "neonValue": "0.012",
+   "megaValue": "0.045",
    "regularDemand": "Low",
    "neonDemand": "Low",
-   "megaDemand": "Medium",
+   "megaDemand": "Low",
    "_category": "Pets",
-   "lastUpdatedAt": "$D2026-10-14T15:19:06.606Z",
+   "lastUpdatedAt": "$D2026-10-15T11:46:13.974Z",
    "amvggCardVariants": {
-    "Base": 0.003,
-    "F": 0.0052,
-    "R": 0.0049,
-    "FR": 0.00675,
-    "Neon": 0.0131,
-    "Neon|F": 0.0159,
-    "Neon|R": 0.0158,
-    "Neon|FR": 0.0175,
-    "Mega": 0.0595,
-    "Mega|F": 0.0665,
-    "Mega|R": 0.0644,
-    "Mega|FR": 0.07
+    "Base": 0.0012,
+    "F": 0.0044,
+    "R": 0.0041,
+    "FR": 0.006,
+    "Neon": 0.0081,
+    "Neon|F": 0.01,
+    "Neon|R": 0.0098,
+    "Neon|FR": 0.012,
+    "Mega": 0.0349,
+    "Mega|F": 0.0401,
+    "Mega|R": 0.0383,
+    "Mega|FR": 0.045
    }
   },
   "64cce77e2446bd991c4ed3bf": {
@@ -23543,7 +23543,7 @@
   "68ea2404c2b440326ceec7b9": {
    "id": "68ea2404c2b440326ceec7b9",
    "name": "Halloween Slime Mega Neon Paint",
-   "value": "0.0065",
+   "value": "0.0055",
    "demand": "High",
    "_category": "Toys",
    "lastUpdatedAt": "$D2026-09-06T13:49:58.057Z"
@@ -26399,7 +26399,7 @@
   "6ac90b3427f127cc0e89171f": {
    "id": "6ac90b3427f127cc0e89171f",
    "name": "Poltergeist Box",
-   "value": "0.00035",
+   "value": "0.0002",
    "demand": "Low",
    "_category": "Gifts",
    "lastUpdatedAt": "$D2026-10-15T11:48:55.006Z"
@@ -29535,7 +29535,7 @@
   "6ac9353127f127cc0e891723": {
    "id": "6ac9353127f127cc0e891723",
    "name": "Soulfire Animated Sticker",
-   "value": "0.002",
+   "value": "0.0015",
    "demand": "Low",
    "_category": "Stickers",
    "lastUpdatedAt": "$D2026-10-10T11:59:55.287Z"
