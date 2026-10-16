@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-16T18:04:55+00:00",
+ "updated": "2026-10-16T21:04:38+00:00",
  "items": {
   "64c48cd3137ba4f492f3aff1": {
    "id": "64c48cd3137ba4f492f3aff1",
@@ -15233,7 +15233,7 @@
    "megaDemand": "Medium",
    "_category": "Pets",
    "origin": "Halloween Event (2022)",
-   "lastUpdatedAt": "$D2026-10-15T15:04:33.306Z",
+   "lastUpdatedAt": "$D2026-10-16T18:20:51.102Z",
    "amvggCardVariants": {
     "Base": 0.458,
     "F": 0.463,
@@ -22696,28 +22696,28 @@
   "6ad2483e27f127cc0e891920": {
    "id": "6ad2483e27f127cc0e891920",
    "name": "Copycat",
-   "category": 69,
-   "regularValue": "0.06",
-   "neonValue": "0.25",
-   "megaValue": "1.05",
+   "category": 99,
+   "regularValue": "0.055",
+   "neonValue": "0.225",
+   "megaValue": "0.95",
    "regularDemand": "High",
    "neonDemand": "High",
    "megaDemand": "High",
    "_category": "Pets",
    "lastUpdatedAt": "$D2026-10-16T15:52:30.439Z",
    "amvggCardVariants": {
-    "Base": 0.054,
-    "F": 0.058,
-    "R": 0.057,
-    "FR": 0.06,
-    "Neon": 0.24,
-    "Neon|F": 0.2463,
-    "Neon|R": 0.245,
-    "Neon|FR": 0.25,
-    "Mega": 1.05,
-    "Mega|F": 1.05,
-    "Mega|R": 1.05,
-    "Mega|FR": 1.05
+    "Base": 0.044,
+    "F": 0.051,
+    "R": 0.05,
+    "FR": 0.055,
+    "Neon": 0.2138,
+    "Neon|F": 0.2205,
+    "Neon|R": 0.2194,
+    "Neon|FR": 0.225,
+    "Mega": 0.95,
+    "Mega|F": 0.95,
+    "Mega|R": 0.95,
+    "Mega|FR": 0.95
    }
   },
   "64cce77e2446bd991c4ed3bf": {
