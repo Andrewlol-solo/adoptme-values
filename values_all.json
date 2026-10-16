@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-16T15:04:45+00:00",
+ "updated": "2026-10-16T18:04:55+00:00",
  "items": {
   "64c48cd3137ba4f492f3aff1": {
    "id": "64c48cd3137ba4f492f3aff1",
@@ -14507,7 +14507,7 @@
    "id": "66b25bbb96790598c340721e",
    "name": "Harp Seal",
    "category": 9,
-   "regularValue": "0.011",
+   "regularValue": "0.0115",
    "neonValue": "0.0375",
    "megaValue": "0.15",
    "regularDemand": "Medium",
@@ -14515,12 +14515,12 @@
    "megaDemand": "Medium",
    "_category": "Pets",
    "origin": "Winter Festival (2023)",
-   "lastUpdatedAt": "$D2026-07-28T13:10:42.124Z",
+   "lastUpdatedAt": "$D2026-10-16T16:36:17.214Z",
    "amvggCardVariants": {
-    "Base": 0.0074,
-    "F": 0.0093,
-    "R": 0.0091,
-    "FR": 0.011,
+    "Base": 0.0077,
+    "F": 0.0098,
+    "R": 0.0095,
+    "FR": 0.0115,
     "Neon": 0.0319,
     "Neon|F": 0.0353,
     "Neon|R": 0.0347,
@@ -22612,6 +22612,114 @@
     "Mega|FR": 0.035
    }
   },
+  "6ad23ff527f127cc0e89191d": {
+   "id": "6ad23ff527f127cc0e89191d",
+   "name": "Shoebill",
+   "category": 1,
+   "regularValue": "0.0035",
+   "neonValue": "0.007",
+   "megaValue": "0.02",
+   "regularDemand": "Low",
+   "neonDemand": "Low",
+   "megaDemand": "Low",
+   "_category": "Pets",
+   "lastUpdatedAt": "$D2026-10-16T15:17:09.604Z",
+   "amvggCardVariants": {
+    "Base": 0.00028,
+    "F": 0.0021,
+    "R": 0.0018,
+    "FR": 0.0035,
+    "Neon": 0.0025,
+    "Neon|F": 0.0055,
+    "Neon|R": 0.0051,
+    "Neon|FR": 0.007,
+    "Mega": 0.011,
+    "Mega|F": 0.016,
+    "Mega|R": 0.0135,
+    "Mega|FR": 0.02
+   }
+  },
+  "6ad2403427f127cc0e89191e": {
+   "id": "6ad2403427f127cc0e89191e",
+   "name": "Boohoo",
+   "category": 3,
+   "regularValue": "0.00425",
+   "neonValue": "0.0085",
+   "megaValue": "0.0275",
+   "regularDemand": "Low",
+   "neonDemand": "Low",
+   "megaDemand": "Medium",
+   "_category": "Pets",
+   "lastUpdatedAt": "$D2026-10-16T15:18:12.405Z",
+   "amvggCardVariants": {
+    "Base": 0.00053,
+    "F": 0.0028,
+    "R": 0.0026,
+    "FR": 0.00425,
+    "Neon": 0.0047,
+    "Neon|F": 0.0069,
+    "Neon|R": 0.0068,
+    "Neon|FR": 0.0085,
+    "Mega": 0.0199,
+    "Mega|F": 0.0234,
+    "Mega|R": 0.022,
+    "Mega|FR": 0.0275
+   }
+  },
+  "6ad2408427f127cc0e89191f": {
+   "id": "6ad2408427f127cc0e89191f",
+   "name": "Stitches",
+   "category": 5,
+   "regularValue": "0.0055",
+   "neonValue": "0.011",
+   "megaValue": "0.04",
+   "regularDemand": "Low",
+   "neonDemand": "Medium",
+   "megaDemand": "Medium",
+   "_category": "Pets",
+   "lastUpdatedAt": "$D2026-10-16T15:19:32.957Z",
+   "amvggCardVariants": {
+    "Base": 0.0011,
+    "F": 0.004,
+    "R": 0.0037,
+    "FR": 0.0055,
+    "Neon": 0.0074,
+    "Neon|F": 0.0091,
+    "Neon|R": 0.009,
+    "Neon|FR": 0.011,
+    "Mega": 0.031,
+    "Mega|F": 0.0356,
+    "Mega|R": 0.034,
+    "Mega|FR": 0.04
+   }
+  },
+  "6ad2483e27f127cc0e891920": {
+   "id": "6ad2483e27f127cc0e891920",
+   "name": "Copycat",
+   "category": 69,
+   "regularValue": "0.06",
+   "neonValue": "0.25",
+   "megaValue": "1.05",
+   "regularDemand": "High",
+   "neonDemand": "High",
+   "megaDemand": "High",
+   "_category": "Pets",
+   "lastUpdatedAt": "$D2026-10-16T15:52:30.439Z",
+   "amvggCardVariants": {
+    "Base": 0.054,
+    "F": 0.058,
+    "R": 0.057,
+    "FR": 0.06,
+    "Neon": 0.24,
+    "Neon|F": 0.2463,
+    "Neon|R": 0.245,
+    "Neon|FR": 0.25,
+    "Mega": 1.05,
+    "Mega|F": 1.05,
+    "Mega|R": 1.05,
+    "Mega|FR": 1.05
+   }
+  },
   "64cce77e2446bd991c4ed3bf": {
    "id": "64cce77e2446bd991c4ed3bf",
    "name": "Mythic Egg",
@@ -29042,7 +29150,7 @@
    "value": "0.175",
    "demand": "Medium",
    "_category": "Stickers",
-   "lastUpdatedAt": "$D2026-08-15T13:32:31.111Z"
+   "lastUpdatedAt": "$D2026-10-16T13:16:12.220Z"
   },
   "66f6a2173bbcc2d89332158b": {
    "id": "66f6a2173bbcc2d89332158b",

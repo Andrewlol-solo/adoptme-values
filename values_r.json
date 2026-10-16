@@ -1,6 +1,6 @@
 {
  "variant_key": "R",
- "updated": "2026-10-16T15:04:45+00:00",
+ "updated": "2026-10-16T18:04:55+00:00",
  "categories": {
   "Gifts": {
    "1000 Bucks Silk Bag": 0.007,
@@ -136,6 +136,7 @@
    "Bluebottle Fly": 0.0018,
    "Bobageist": 0.0019,
    "Bolt": 0.0016,
+   "Boohoo": 0.0026,
    "Border Collie": 0.074,
    "Borhyaena Gigantica": 0.0018,
    "Brachiosaurus": 0.002,
@@ -205,6 +206,7 @@
    "Cocoadile": 0.0016,
    "Coconut Friend": 0.0045,
    "Cold Cube": 0.0033,
+   "Copycat": 0.057,
    "Corgi": 0.0016,
    "Corn Doggo": 0.0107,
    "Cow": 0.2075,
@@ -389,7 +391,7 @@
    "Happy Clam": 0.024,
    "Happy Duckling": 0.0051,
    "Hare": 0.018,
-   "Harp Seal": 0.0091,
+   "Harp Seal": 0.0095,
    "Hawk": 0.0051,
    "Headless Horse": 0.0111,
    "Hedgehog": 0.425,
@@ -697,6 +699,7 @@
    "Shiba Inu": 0.0016,
    "Shih Tzu": 0.0016,
    "Shiver Wolf": 0.0049,
+   "Shoebill": 0.0018,
    "Show Pony": 0.0021,
    "Shrew": 0.041,
    "Siamese Cat": 0.131,
@@ -736,6 +739,7 @@
    "Stegosaurus": 0.0027,
    "Steppe Lion": 0.0037,
    "Stingray": 0.0018,
+   "Stitches": 0.0037,
    "Storm Condor": 0.0016,
    "Strawberry Penguin": 0.044,
    "Strawberry Shortcake Bat Dragon": 0.27,
