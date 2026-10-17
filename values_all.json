@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-17T09:04:51+00:00",
+ "updated": "2026-10-17T12:04:40+00:00",
  "items": {
   "64c48cd3137ba4f492f3aff1": {
    "id": "64c48cd3137ba4f492f3aff1",
@@ -7766,7 +7766,7 @@
   "67e6ae21abae89b678a25c90": {
    "id": "67e6ae21abae89b678a25c90",
    "name": "Frostbite Bear",
-   "category": 46,
+   "category": 45,
    "regularValue": "0.1925",
    "neonValue": "0.775",
    "megaValue": "3.125",
@@ -7781,11 +7781,11 @@
    "mfDemand": "Low",
    "_category": "Pets",
    "origin": "Ice Dimension Event (2025)",
-   "lastUpdatedAt": "$D2026-10-15T14:47:39.970Z",
+   "lastUpdatedAt": "$D2026-10-17T10:19:57.875Z",
    "amvggCardVariants": {
-    "Base": 0.189,
-    "F": 0.191,
-    "R": 0.19,
+    "Base": 0.187,
+    "F": 0.19,
+    "R": 0.189,
     "FR": 0.1925,
     "Neon": 0.775,
     "Neon|F": 0.775,
