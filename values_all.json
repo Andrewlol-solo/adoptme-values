@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-16T21:04:38+00:00",
+ "updated": "2026-10-17T09:04:51+00:00",
  "items": {
   "64c48cd3137ba4f492f3aff1": {
    "id": "64c48cd3137ba4f492f3aff1",
@@ -22704,7 +22704,7 @@
    "neonDemand": "High",
    "megaDemand": "High",
    "_category": "Pets",
-   "lastUpdatedAt": "$D2026-10-16T15:52:30.439Z",
+   "lastUpdatedAt": "$D2026-10-16T20:22:41.683Z",
    "amvggCardVariants": {
     "Base": 0.044,
     "F": 0.051,
