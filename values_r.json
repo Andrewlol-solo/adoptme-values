@@ -1,6 +1,6 @@
 {
  "variant_key": "R",
- "updated": "2026-10-18T15:04:39+00:00",
+ "updated": "2026-10-18T21:04:42+00:00",
  "categories": {
   "Gifts": {
    "1000 Bucks Silk Bag": 0.007,
@@ -393,7 +393,7 @@
    "Hare": 0.018,
    "Harp Seal": 0.0095,
    "Hawk": 0.0051,
-   "Headless Horse": 0.0107,
+   "Headless Horse": 0.0103,
    "Hedgehog": 0.425,
    "Hermit Crab": 0.0021,
    "Hero Gibbon": 0.057,
@@ -707,7 +707,7 @@
    "Silverback Gorilla": 0.081,
    "Singularity Beetle": 0.0033,
    "Singularity Pisces": 0.0037,
-   "Skele-Rex": 0.0128,
+   "Skele-Rex": 0.0124,
    "Skelebat": 0.0027,
    "Skelicorn": 0.003,
    "Skunk": 0.0041,
@@ -1393,7 +1393,7 @@
    "Gift Throw Toy": 0.001,
    "Glider": 0.013,
    "Golden Goblet": 0.0065,
-   "Halloween Slime Mega Neon Paint": 0.0055,
+   "Halloween Slime Mega Neon Paint": 0.005,
    "Heart Balloon": 0.0015,
    "Heart Plushie": 0.002,
    "Heart Rattle": 0.02,
