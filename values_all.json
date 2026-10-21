@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-21T18:04:46+00:00",
+ "updated": "2026-10-21T21:04:48+00:00",
  "items": {
   "64c48cd3137ba4f492f3aff1": {
    "id": "64c48cd3137ba4f492f3aff1",
@@ -19133,7 +19133,7 @@
    "megaDemand": "Medium",
    "_category": "Pets",
    "origin": "2D Boxes",
-   "lastUpdatedAt": "$D2026-10-21T15:23:01.170Z",
+   "lastUpdatedAt": "$D2026-10-21T18:19:27.171Z",
    "amvggCardVariants": {
     "Base": 0.0064,
     "F": 0.0081,
@@ -22870,7 +22870,7 @@
    "value": "1.25",
    "demand": "Medium",
    "_category": "Eggs",
-   "lastUpdatedAt": "$D2026-10-16T13:15:27.886Z"
+   "lastUpdatedAt": "$D2026-10-21T15:27:15.988Z"
   },
   "67f0ab9dabae89b678a25c94": {
    "id": "67f0ab9dabae89b678a25c94",
