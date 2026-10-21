@@ -1,6 +1,6 @@
 {
  "variant_key": "Neon|R",
- "updated": "2026-10-21T12:04:44+00:00",
+ "updated": "2026-10-21T15:04:39+00:00",
  "categories": {
   "Gifts": {
    "1000 Bucks Silk Bag": 0.007,
@@ -218,7 +218,7 @@
    "Criosphinx": 0.018,
    "Crocodile": 0.2401,
    "Crow": 2.23,
-   "Cryptid": 1.925,
+   "Cryptid": 1.9,
    "Cuddly Candle": 0.0225,
    "Cupid Dragon": 0.1706,
    "Cute-A-Cabra": 0.0081,
@@ -498,7 +498,7 @@
    "Matcha Cat": 0.195,
    "Mecha Meow": 0.018,
    "Mecha R4BBIT": 0.0081,
-   "Mechapup": 0.4312,
+   "Mechapup": 0.4263,
    "Meerkat": 0.1248,
    "Merhorse": 0.0076,
    "Mermicorn": 0.4508,
@@ -792,7 +792,7 @@
    "Turtle Doves": 0.0042,
    "Tuxedo Cat": 0.0324,
    "Undead Elk": 0.0081,
-   "Undead Jousting Horse": 1.125,
+   "Undead Jousting Horse": 1.1,
    "Unicorn": 0.0275,
    "Unicorn Ducky": 0.0038,
    "Urchin": 0.006,

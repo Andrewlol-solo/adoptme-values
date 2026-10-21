@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-21T12:04:44+00:00",
+ "updated": "2026-10-21T15:04:39+00:00",
  "items": {
   "64c48cd3137ba4f492f3aff1": {
    "id": "64c48cd3137ba4f492f3aff1",
@@ -10987,20 +10987,20 @@
    "megaDemand": "Medium",
    "_category": "Pets",
    "origin": "April Fool's Weekend (2022)",
-   "lastUpdatedAt": "$D2026-09-11T11:50:22.583Z",
+   "lastUpdatedAt": "$D2026-10-21T14:44:01.894Z",
    "amvggCardVariants": {
     "Base": 0.101,
     "F": 0.105,
     "R": 0.103,
     "FR": 0.1075,
-    "Neon": 0.4268,
-    "Neon|F": 0.4356,
-    "Neon|R": 0.4312,
-    "Neon|FR": 0.44,
-    "Mega": 1.8638,
-    "Mega|F": 1.775,
-    "Mega|R": 1.775,
-    "Mega|FR": 1.775
+    "Neon": 0.422,
+    "Neon|F": 0.4307,
+    "Neon|R": 0.4263,
+    "Neon|FR": 0.435,
+    "Mega": 1.8375,
+    "Mega|F": 1.75,
+    "Mega|R": 1.75,
+    "Mega|FR": 1.75
    }
   },
   "64c493d9137ba4f492f3afff": {
@@ -15233,20 +15233,20 @@
    "megaDemand": "Medium",
    "_category": "Pets",
    "origin": "Halloween Event (2022)",
-   "lastUpdatedAt": "$D2026-10-20T14:47:26.753Z",
+   "lastUpdatedAt": "$D2026-10-21T14:47:32.103Z",
    "amvggCardVariants": {
-    "Base": 0.428,
-    "F": 0.433,
-    "R": 0.431,
-    "FR": 0.435,
-    "Neon": 1.125,
-    "Neon|F": 1.125,
-    "Neon|R": 1.125,
-    "Neon|FR": 1.125,
-    "Mega": 4.305,
-    "Mega|F": 4.1,
-    "Mega|R": 4.1,
-    "Mega|FR": 4.1
+    "Base": 0.419,
+    "F": 0.423,
+    "R": 0.421,
+    "FR": 0.425,
+    "Neon": 1.1,
+    "Neon|F": 1.1,
+    "Neon|R": 1.1,
+    "Neon|FR": 1.1,
+    "Mega": 4.2525,
+    "Mega|F": 4.05,
+    "Mega|R": 4.05,
+    "Mega|FR": 4.05
    }
   },
   "64c5be0e2ecb6add46f2469c": {
@@ -18695,20 +18695,20 @@
    "mfDemand": "Medium",
    "_category": "Pets",
    "origin": "Halloween Event (2025)",
-   "lastUpdatedAt": "$D2026-10-20T14:44:23.180Z",
+   "lastUpdatedAt": "$D2026-10-21T14:46:43.193Z",
    "amvggCardVariants": {
     "Base": 0.83,
     "F": 0.835,
     "R": 0.835,
     "FR": 0.84,
-    "Neon": 1.95,
-    "Neon|F": 1.925,
-    "Neon|R": 1.925,
-    "Neon|FR": 1.925,
-    "Mega": 6.5,
-    "Mega|F": 6.3,
-    "Mega|R": 6.3,
-    "Mega|FR": 6.3
+    "Neon": 1.925,
+    "Neon|F": 1.9,
+    "Neon|R": 1.9,
+    "Neon|FR": 1.9,
+    "Mega": 6.4,
+    "Mega|F": 6.2,
+    "Mega|R": 6.2,
+    "Mega|FR": 6.2
    }
   },
   "68fbbc0a84e2f0b23e5c0166": {
