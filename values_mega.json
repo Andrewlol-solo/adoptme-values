@@ -1,6 +1,6 @@
 {
  "variant_key": "Mega",
- "updated": "2026-10-23T15:04:37+00:00",
+ "updated": "2026-10-23T18:04:49+00:00",
  "categories": {
   "Gifts": {
    "1000 Bucks Silk Bag": 0.007,
@@ -209,6 +209,7 @@
    "Copycat": 0.76,
    "Corgi": 0.0063,
    "Corn Doggo": 0.1943,
+   "Count Slothula": 0.1573,
    "Cow": 1.5,
    "Cow Calf": 0.0495,
    "Coyote": 0.031,
@@ -745,6 +746,7 @@
    "Strawberry Shortcake Bat Dragon": 2.8088,
    "Strawberry Shortcake Ducky": 0.0349,
    "Strawberry Tortle": 2.8,
+   "Stray Cat Dragon": 0.1295,
    "Striped Eggy": 0.0495,
    "Stygian Owl": 0.0036,
    "Subzero Scorpion": 0.031,
@@ -1120,7 +1122,7 @@
    "Royal Egg": 0.0003,
    "Royal Fairytale Egg": 0.0025,
    "Royal Moon Egg": 0.01,
-   "Safari Egg": 1.3,
+   "Safari Egg": 1.35,
    "Southeast Asia Egg": 0.0035,
    "Throwback Egg": 0.00013,
    "Urban Egg": 0.0055,
@@ -1564,6 +1566,7 @@
    "Shiba Inu Sticker": 0.0007,
    "Skele-Rex Sticker": 0.0005,
    "Sledding Penguin Sticker": 0.0005,
+   "Slothula Transformation Animated Sticker": 0.0025,
    "Solaris Animated Sticker": 0.0055,
    "Soulfire Animated Sticker": 0.001,
    "Space Whale Sticker": 0.002,
