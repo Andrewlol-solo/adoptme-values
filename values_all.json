@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-24T12:04:50+00:00",
+ "updated": "2026-10-24T15:04:41+00:00",
  "items": {
   "64c48cd3137ba4f492f3aff1": {
    "id": "64c48cd3137ba4f492f3aff1",
@@ -2402,10 +2402,10 @@
     "Neon|F": 12.975,
     "Neon|R": 12.925,
     "Neon|FR": 12.725,
-    "Mega": 41.0,
-    "Mega|F": 38.4,
-    "Mega|R": 38.3,
-    "Mega|FR": 38.1
+    "Mega": 40.9,
+    "Mega|F": 38.3,
+    "Mega|R": 38.2,
+    "Mega|FR": 38.0
    }
   },
   "64b2425d5eb0a4c70cd01318": {
@@ -9249,14 +9249,14 @@
     "F": 0.875,
     "R": 0.875,
     "FR": 0.88,
-    "Neon": 3.48,
-    "Neon|F": 3.46,
-    "Neon|R": 3.46,
-    "Neon|FR": 3.46,
-    "Mega": 12.65,
-    "Mega|F": 12.25,
-    "Mega|R": 12.25,
-    "Mega|FR": 12.2
+    "Neon": 3.475,
+    "Neon|F": 3.45,
+    "Neon|R": 3.45,
+    "Neon|FR": 3.45,
+    "Mega": 12.45,
+    "Mega|F": 12.05,
+    "Mega|R": 12.05,
+    "Mega|FR": 12.0
    }
   },
   "66235f4e33b5405c25c689ff": {
@@ -12005,18 +12005,18 @@
    "origin": "Christmas Event (2019)",
    "lastUpdatedAt": "$D2026-10-23T13:57:09.790Z",
    "amvggCardVariants": {
-    "Base": 0.3075,
-    "F": 0.3025,
-    "R": 0.3025,
-    "FR": 0.3075,
-    "Neon": 0.8,
-    "Neon|F": 0.615,
-    "Neon|R": 0.615,
-    "Neon|FR": 0.615,
-    "Mega": 3.2,
-    "Mega|F": 2.475,
-    "Mega|R": 2.475,
-    "Mega|FR": 2.425
+    "Base": 0.315,
+    "F": 0.31,
+    "R": 0.31,
+    "FR": 0.315,
+    "Neon": 0.825,
+    "Neon|F": 0.63,
+    "Neon|R": 0.63,
+    "Neon|FR": 0.63,
+    "Mega": 3.3,
+    "Mega|F": 2.55,
+    "Mega|R": 2.55,
+    "Mega|FR": 2.5
    }
   },
   "64b246685eb0a4c70cd01320": {
@@ -15235,18 +15235,18 @@
    "origin": "Halloween Event (2022)",
    "lastUpdatedAt": "$D2026-10-23T13:53:18.413Z",
    "amvggCardVariants": {
-    "Base": 0.399,
-    "F": 0.403,
-    "R": 0.401,
-    "FR": 0.405,
-    "Neon": 1.05,
-    "Neon|F": 1.05,
-    "Neon|R": 1.05,
-    "Neon|FR": 1.05,
-    "Mega": 4.0163,
-    "Mega|F": 3.825,
-    "Mega|R": 3.825,
-    "Mega|FR": 3.825
+    "Base": 0.384,
+    "F": 0.388,
+    "R": 0.386,
+    "FR": 0.39,
+    "Neon": 1.025,
+    "Neon|F": 1.025,
+    "Neon|R": 1.025,
+    "Neon|FR": 1.025,
+    "Mega": 3.9375,
+    "Mega|F": 3.75,
+    "Mega|R": 3.75,
+    "Mega|FR": 3.75
    }
   },
   "64c5be0e2ecb6add46f2469c": {
@@ -17625,18 +17625,18 @@
    "origin": "Día De Los Muertos Event (2024)",
    "lastUpdatedAt": "$D2026-10-23T13:52:56.286Z",
    "amvggCardVariants": {
-    "Base": 0.36,
-    "F": 0.363,
-    "R": 0.361,
-    "FR": 0.365,
-    "Neon": 0.91,
-    "Neon|F": 0.91,
-    "Neon|R": 0.91,
-    "Neon|FR": 0.91,
-    "Mega": 3.6225,
-    "Mega|F": 3.45,
-    "Mega|R": 3.45,
-    "Mega|FR": 3.45
+    "Base": 0.345,
+    "F": 0.348,
+    "R": 0.347,
+    "FR": 0.35,
+    "Neon": 0.9,
+    "Neon|F": 0.9,
+    "Neon|R": 0.9,
+    "Neon|FR": 0.9,
+    "Mega": 3.57,
+    "Mega|F": 3.4,
+    "Mega|R": 3.4,
+    "Mega|FR": 3.4
    }
   },
   "680ed267a0e33e9a9813ad06": {
@@ -18701,14 +18701,14 @@
     "F": 0.835,
     "R": 0.835,
     "FR": 0.84,
-    "Neon": 1.85,
-    "Neon|F": 1.825,
-    "Neon|R": 1.825,
-    "Neon|FR": 1.825,
+    "Neon": 1.825,
+    "Neon|F": 1.8,
+    "Neon|R": 1.8,
+    "Neon|FR": 1.8,
     "Mega": 6.25,
-    "Mega|F": 6.05,
-    "Mega|R": 6.05,
-    "Mega|FR": 6.05
+    "Mega|F": 5.95,
+    "Mega|R": 5.95,
+    "Mega|FR": 5.95
    }
   },
   "68fbbc0a84e2f0b23e5c0166": {
