@@ -1,6 +1,6 @@
 {
  "variant_key": "FR",
- "updated": "2026-10-24T18:04:45+00:00",
+ "updated": "2026-10-24T21:04:46+00:00",
  "categories": {
   "Gifts": {
    "1000 Bucks Silk Bag": 0.007,
@@ -881,7 +881,7 @@
    "Candy Cane (Pet Wear)": 0.002,
    "Candy Cane Wings": 0.002,
    "Candy Corn Hat": 0.0015,
-   "Cat Backpack": 0.002,
+   "Cat Backpack": 0.001,
    "Cheese Hat": 0.002,
    "Cheesecake Hat": 0.0015,
    "Chef Hat": 0.01,
@@ -1759,6 +1759,19 @@
    "Soccer Stadium": 0.01,
    "Space Fleet House": 0.0275,
    "Toyshop House": 0.0275
+  },
+  "Other": {
+   "Bone Wings": 0.0015,
+   "Bunch Of Balloons": 0.0005,
+   "Crescent Moon Head Ornament": 0.0015,
+   "Culinary Wizard Hat": 0.0015,
+   "Dog Backpack": 0.001,
+   "Eco Orange Maple Cape": 0.0015,
+   "Galaxy Explorer Helmet": 0.002,
+   "Growing Flower Hat": 0.0015,
+   "Rainbow Dragon Hat": 0.001,
+   "Silly Duck Hat": 0.001,
+   "Solar System Necklace": 0.001
   }
  }
 }
