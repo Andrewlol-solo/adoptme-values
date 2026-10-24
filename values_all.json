@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-24T00:04:38+00:00",
+ "updated": "2026-10-24T12:04:50+00:00",
  "items": {
   "64c48cd3137ba4f492f3aff1": {
    "id": "64c48cd3137ba4f492f3aff1",
@@ -22750,28 +22750,28 @@
   "6adb7e6027f127cc0e891aa0": {
    "id": "6adb7e6027f127cc0e891aa0",
    "name": "Stray Cat Dragon",
-   "category": 9,
-   "regularValue": "0.009",
-   "neonValue": "0.035",
-   "megaValue": "0.14",
-   "regularDemand": "Medium",
+   "category": 7,
+   "regularValue": "0.007",
+   "neonValue": "0.02",
+   "megaValue": "0.08",
+   "regularDemand": "Low",
    "neonDemand": "Medium",
    "megaDemand": "Medium",
    "_category": "Pets",
-   "lastUpdatedAt": "$D2026-10-23T15:33:52.310Z",
+   "lastUpdatedAt": "$D2026-10-24T10:47:54.928Z",
    "amvggCardVariants": {
-    "Base": 0.006,
-    "F": 0.0076,
-    "R": 0.0074,
-    "FR": 0.009,
-    "Neon": 0.0298,
-    "Neon|F": 0.0329,
-    "Neon|R": 0.0324,
-    "Neon|FR": 0.035,
-    "Mega": 0.1295,
-    "Mega|F": 0.1365,
-    "Mega|R": 0.133,
-    "Mega|FR": 0.14
+    "Base": 0.0032,
+    "F": 0.0054,
+    "R": 0.0051,
+    "FR": 0.007,
+    "Neon": 0.015,
+    "Neon|F": 0.0182,
+    "Neon|R": 0.018,
+    "Neon|FR": 0.02,
+    "Mega": 0.068,
+    "Mega|F": 0.076,
+    "Mega|R": 0.0736,
+    "Mega|FR": 0.08
    }
   },
   "64cce77e2446bd991c4ed3bf": {
