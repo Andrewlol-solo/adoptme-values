@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-25T19:04:38+00:00",
+ "updated": "2026-10-25T22:04:38+00:00",
  "items": {
   "64c48cd3137ba4f492f3aff1": {
    "id": "64c48cd3137ba4f492f3aff1",
@@ -15224,7 +15224,7 @@
   "64c49331137ba4f492f3affc": {
    "id": "64c49331137ba4f492f3affc",
    "name": "Undead Jousting Horse",
-   "category": 49,
+   "category": 47,
    "regularValue": "0.37",
    "neonValue": "0.975",
    "megaValue": "3.65",
@@ -15233,11 +15233,11 @@
    "megaDemand": "Medium",
    "_category": "Pets",
    "origin": "Halloween Event (2022)",
-   "lastUpdatedAt": "$D2026-10-25T15:29:13.183Z",
+   "lastUpdatedAt": "$D2026-10-25T19:32:52.957Z",
    "amvggCardVariants": {
-    "Base": 0.364,
-    "F": 0.368,
-    "R": 0.366,
+    "Base": 0.363,
+    "F": 0.366,
+    "R": 0.364,
     "FR": 0.37,
     "Neon": 0.975,
     "Neon|F": 0.975,
@@ -17614,7 +17614,7 @@
   "67234b5a0932eb0782f3e0dc": {
    "id": "67234b5a0932eb0782f3e0dc",
    "name": "Jekyll Hydra",
-   "category": 49,
+   "category": 47,
    "regularValue": "0.33",
    "neonValue": "0.875",
    "megaValue": "3.3",
@@ -17623,11 +17623,11 @@
    "megaDemand": "Medium",
    "_category": "Pets",
    "origin": "Día De Los Muertos Event (2024)",
-   "lastUpdatedAt": "$D2026-10-25T15:31:11.288Z",
+   "lastUpdatedAt": "$D2026-10-25T19:32:52.957Z",
    "amvggCardVariants": {
-    "Base": 0.325,
-    "F": 0.328,
-    "R": 0.327,
+    "Base": 0.323,
+    "F": 0.327,
+    "R": 0.325,
     "FR": 0.33,
     "Neon": 0.875,
     "Neon|F": 0.875,
@@ -23540,7 +23540,7 @@
    "value": "10.6",
    "demand": "Medium",
    "_category": "Toys",
-   "lastUpdatedAt": "$D2026-10-16T13:15:11.324Z"
+   "lastUpdatedAt": "$D2026-10-25T16:25:10.354Z"
   },
   "6853150ff8879759774dcc42": {
    "id": "6853150ff8879759774dcc42",
@@ -24740,7 +24740,7 @@
    "value": "2.3",
    "demand": "Medium",
    "_category": "Vehicles",
-   "lastUpdatedAt": "$D2026-09-30T15:15:18.150Z"
+   "lastUpdatedAt": "$D2026-10-25T16:25:18.122Z"
   },
   "6874881f482a5d99a3df6aa8": {
    "id": "6874881f482a5d99a3df6aa8",
