@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-28T13:04:45+00:00",
+ "updated": "2026-10-28T16:04:40+00:00",
  "items": {
   "64c48cd3137ba4f492f3aff1": {
    "id": "64c48cd3137ba4f492f3aff1",
@@ -173,18 +173,18 @@
    "origin": "Halloween Event (2020)",
    "lastUpdatedAt": "$D2026-10-27T15:12:35.862Z",
    "amvggCardVariants": {
-    "Base": 0.013,
-    "F": 0.015,
-    "R": 0.014,
-    "FR": 0.018,
-    "Neon": 0.0616,
-    "Neon|F": 0.0674,
-    "Neon|R": 0.0653,
-    "Neon|FR": 0.0725,
-    "Mega": 0.2755,
-    "Mega|F": 0.2856,
-    "Mega|R": 0.2799,
-    "Mega|FR": 0.29
+    "Base": 0.0119,
+    "F": 0.0145,
+    "R": 0.0136,
+    "FR": 0.017,
+    "Neon": 0.0578,
+    "Neon|F": 0.0632,
+    "Neon|R": 0.0612,
+    "Neon|FR": 0.068,
+    "Mega": 0.2613,
+    "Mega|F": 0.2709,
+    "Mega|R": 0.2654,
+    "Mega|FR": 0.275
    }
   },
   "64ca7c756c83cdf46c57fc4b": {
@@ -737,14 +737,14 @@
     "F": 0.052,
     "R": 0.05,
     "FR": 0.056,
-    "Neon": 0.1662,
-    "Neon|F": 0.1715,
-    "Neon|R": 0.1706,
-    "Neon|FR": 0.175,
-    "Mega": 0.735,
-    "Mega|F": 0.7,
-    "Mega|R": 0.7,
-    "Mega|FR": 0.7
+    "Neon": 0.171,
+    "Neon|F": 0.1764,
+    "Neon|R": 0.1755,
+    "Neon|FR": 0.18,
+    "Mega": 0.756,
+    "Mega|F": 0.72,
+    "Mega|R": 0.72,
+    "Mega|FR": 0.72
    }
   },
   "64e1710b72ae2045fa3ce7f4": {
@@ -2486,18 +2486,18 @@
    "origin": "Christmas Event (2019)",
    "lastUpdatedAt": "$D2026-10-27T14:52:30.351Z",
    "amvggCardVariants": {
-    "Base": 0.45,
-    "F": 0.455,
-    "R": 0.455,
-    "FR": 0.46,
-    "Neon": 1.58,
-    "Neon|F": 1.56,
-    "Neon|R": 1.56,
-    "Neon|FR": 1.56,
-    "Mega": 6.575,
-    "Mega|F": 6.225,
-    "Mega|R": 6.225,
-    "Mega|FR": 6.175
+    "Base": 0.455,
+    "F": 0.46,
+    "R": 0.46,
+    "FR": 0.465,
+    "Neon": 1.585,
+    "Neon|F": 1.565,
+    "Neon|R": 1.565,
+    "Neon|FR": 1.565,
+    "Mega": 6.625,
+    "Mega|F": 6.275,
+    "Mega|R": 6.275,
+    "Mega|FR": 6.225
    }
   },
   "64c48a47137ba4f492f3afec": {
@@ -5182,18 +5182,18 @@
    "origin": "Summer State Fair (2024)",
    "lastUpdatedAt": "$D2026-10-27T15:07:15.757Z",
    "amvggCardVariants": {
-    "Base": 0.054,
-    "F": 0.058,
-    "R": 0.057,
-    "FR": 0.06,
-    "Neon": 0.2352,
-    "Neon|F": 0.2413,
-    "Neon|R": 0.2401,
-    "Neon|FR": 0.245,
-    "Mega": 1.05,
-    "Mega|F": 1.0,
-    "Mega|R": 1.0,
-    "Mega|FR": 1.0
+    "Base": 0.046,
+    "F": 0.053,
+    "R": 0.052,
+    "FR": 0.0575,
+    "Neon": 0.2209,
+    "Neon|F": 0.2279,
+    "Neon|R": 0.2267,
+    "Neon|FR": 0.2325,
+    "Mega": 0.9975,
+    "Mega|F": 0.95,
+    "Mega|R": 0.95,
+    "Mega|FR": 0.95
    }
   },
   "66ab7b4296790598c3407219": {
@@ -6349,18 +6349,18 @@
    "origin": "Pelican Stand",
    "lastUpdatedAt": "$D2026-10-27T15:30:42.539Z",
    "amvggCardVariants": {
-    "Base": 0.179,
-    "F": 0.182,
-    "R": 0.181,
-    "FR": 0.185,
-    "Neon": 0.74,
-    "Neon|F": 0.74,
-    "Neon|R": 0.74,
-    "Neon|FR": 0.74,
-    "Mega": 3.034,
-    "Mega|F": 2.96,
-    "Mega|R": 2.96,
-    "Mega|FR": 2.96
+    "Base": 0.177,
+    "F": 0.18,
+    "R": 0.179,
+    "FR": 0.1825,
+    "Neon": 0.73,
+    "Neon|F": 0.73,
+    "Neon|R": 0.73,
+    "Neon|FR": 0.73,
+    "Mega": 2.993,
+    "Mega|F": 2.92,
+    "Mega|R": 2.92,
+    "Mega|FR": 2.92
    }
   },
   "65aa9e21366d318cf03a6659": {
@@ -6378,17 +6378,17 @@
    "lastUpdatedAt": "$D2026-10-27T15:22:35.102Z",
    "amvggCardVariants": {
     "Base": 0.016,
-    "F": 0.018,
+    "F": 0.019,
     "R": 0.018,
-    "FR": 0.021,
-    "Neon": 0.0748,
-    "Neon|F": 0.0808,
-    "Neon|R": 0.0791,
-    "Neon|FR": 0.085,
-    "Mega": 0.3298,
-    "Mega|F": 0.3366,
-    "Mega|R": 0.3332,
-    "Mega|FR": 0.34
+    "FR": 0.0215,
+    "Neon": 0.077,
+    "Neon|F": 0.0831,
+    "Neon|R": 0.0814,
+    "Neon|FR": 0.0875,
+    "Mega": 0.3395,
+    "Mega|F": 0.3465,
+    "Mega|R": 0.343,
+    "Mega|FR": 0.35
    }
   },
   "65abba182fbde2e079f30e97": {
@@ -7783,18 +7783,18 @@
    "origin": "Ice Dimension Event (2025)",
    "lastUpdatedAt": "$D2026-10-23T14:26:05.363Z",
    "amvggCardVariants": {
-    "Base": 0.201,
-    "F": 0.204,
-    "R": 0.203,
-    "FR": 0.2075,
-    "Neon": 0.83,
-    "Neon|F": 0.83,
-    "Neon|R": 0.83,
-    "Neon|FR": 0.83,
-    "Mega": 3.375,
-    "Mega|F": 3.375,
-    "Mega|R": 3.375,
-    "Mega|FR": 3.375
+    "Base": 0.206,
+    "F": 0.209,
+    "R": 0.208,
+    "FR": 0.2125,
+    "Neon": 0.85,
+    "Neon|F": 0.85,
+    "Neon|R": 0.85,
+    "Neon|FR": 0.85,
+    "Mega": 3.425,
+    "Mega|F": 3.425,
+    "Mega|R": 3.425,
+    "Mega|FR": 3.425
    }
   },
   "6844611408e3d3b12d380400": {
@@ -8025,18 +8025,18 @@
    "origin": "Pets Plus Subscription",
    "lastUpdatedAt": "$D2026-10-25T15:50:22.789Z",
    "amvggCardVariants": {
-    "Base": 0.034,
-    "F": 0.039,
-    "R": 0.038,
-    "FR": 0.0425,
-    "Neon": 0.1615,
-    "Neon|F": 0.1666,
-    "Neon|R": 0.1658,
-    "Neon|FR": 0.17,
-    "Mega": 0.7,
-    "Mega|F": 0.7,
-    "Mega|R": 0.7,
-    "Mega|FR": 0.7
+    "Base": 0.033,
+    "F": 0.038,
+    "R": 0.037,
+    "FR": 0.041,
+    "Neon": 0.1568,
+    "Neon|F": 0.1617,
+    "Neon|R": 0.1609,
+    "Neon|FR": 0.165,
+    "Mega": 0.68,
+    "Mega|F": 0.68,
+    "Mega|R": 0.68,
+    "Mega|FR": 0.68
    }
   },
   "670929c90932eb0782f3e0cd": {
@@ -8435,18 +8435,18 @@
    "origin": "Christmas Event (2019)",
    "lastUpdatedAt": "$D2026-10-27T14:52:30.351Z",
    "amvggCardVariants": {
-    "Base": 0.38,
-    "F": 0.385,
-    "R": 0.385,
-    "FR": 0.39,
+    "Base": 0.385,
+    "F": 0.39,
+    "R": 0.39,
+    "FR": 0.395,
     "Neon": 1.285,
     "Neon|F": 1.26,
     "Neon|R": 1.26,
     "Neon|FR": 1.26,
-    "Mega": 5.175,
-    "Mega|F": 4.875,
-    "Mega|R": 4.875,
-    "Mega|FR": 4.825
+    "Mega": 5.225,
+    "Mega|F": 4.925,
+    "Mega|R": 4.925,
+    "Mega|FR": 4.875
    }
   },
   "64b4a4ea51ca2e1263043cce": {
@@ -10275,10 +10275,10 @@
     "F": 0.826,
     "R": 0.822,
     "FR": 0.83,
-    "Neon": 2.94,
-    "Neon|F": 2.94,
-    "Neon|R": 2.94,
-    "Neon|FR": 2.94,
+    "Neon": 2.92,
+    "Neon|F": 2.92,
+    "Neon|R": 2.92,
+    "Neon|FR": 2.92,
     "Mega": 10.6087,
     "Mega|F": 10.35,
     "Mega|R": 10.35,
@@ -10821,18 +10821,18 @@
    "origin": "Gibbon Fairground",
    "lastUpdatedAt": "$D2026-10-27T15:09:10.569Z",
    "amvggCardVariants": {
-    "Base": 0.04,
-    "F": 0.046,
-    "R": 0.045,
-    "FR": 0.05,
-    "Neon": 0.1924,
-    "Neon|F": 0.1985,
-    "Neon|R": 0.1974,
-    "Neon|FR": 0.2025,
-    "Mega": 0.83,
-    "Mega|F": 0.83,
-    "Mega|R": 0.83,
-    "Mega|FR": 0.83
+    "Base": 0.039,
+    "F": 0.045,
+    "R": 0.044,
+    "FR": 0.0485,
+    "Neon": 0.1853,
+    "Neon|F": 0.1911,
+    "Neon|R": 0.1901,
+    "Neon|FR": 0.195,
+    "Mega": 0.8,
+    "Mega|F": 0.8,
+    "Mega|R": 0.8,
+    "Mega|FR": 0.8
    }
   },
   "682b2c4c623c4b2f9976d16a": {
@@ -10989,18 +10989,18 @@
    "origin": "April Fool's Weekend (2022)",
    "lastUpdatedAt": "$D2026-10-27T15:05:07.895Z",
    "amvggCardVariants": {
-    "Base": 0.08,
-    "F": 0.083,
-    "R": 0.082,
-    "FR": 0.085,
-    "Neon": 0.3346,
-    "Neon|F": 0.3415,
-    "Neon|R": 0.3381,
-    "Neon|FR": 0.345,
-    "Mega": 1.47,
-    "Mega|F": 1.4,
-    "Mega|R": 1.4,
-    "Mega|FR": 1.4
+    "Base": 0.075,
+    "F": 0.078,
+    "R": 0.077,
+    "FR": 0.08,
+    "Neon": 0.3153,
+    "Neon|F": 0.3218,
+    "Neon|R": 0.3185,
+    "Neon|FR": 0.325,
+    "Mega": 1.3913,
+    "Mega|F": 1.325,
+    "Mega|R": 1.325,
+    "Mega|FR": 1.325
    }
   },
   "64c493d9137ba4f492f3afff": {
@@ -12005,18 +12005,18 @@
    "origin": "Christmas Event (2019)",
    "lastUpdatedAt": "$D2026-10-27T14:56:23.478Z",
    "amvggCardVariants": {
-    "Base": 0.335,
-    "F": 0.33,
-    "R": 0.33,
-    "FR": 0.335,
-    "Neon": 0.85,
-    "Neon|F": 0.68,
-    "Neon|R": 0.68,
-    "Neon|FR": 0.68,
-    "Mega": 3.45,
-    "Mega|F": 2.725,
-    "Mega|R": 2.725,
-    "Mega|FR": 2.675
+    "Base": 0.34,
+    "F": 0.335,
+    "R": 0.335,
+    "FR": 0.34,
+    "Neon": 0.875,
+    "Neon|F": 0.69,
+    "Neon|R": 0.69,
+    "Neon|FR": 0.69,
+    "Mega": 3.5,
+    "Mega|F": 2.75,
+    "Mega|R": 2.75,
+    "Mega|FR": 2.7
    }
   },
   "64b246685eb0a4c70cd01320": {
@@ -13508,18 +13508,18 @@
    "origin": "UGC Event",
    "lastUpdatedAt": "$D2026-10-27T15:09:08.012Z",
    "amvggCardVariants": {
-    "Base": 0.04,
-    "F": 0.046,
-    "R": 0.045,
-    "FR": 0.05,
-    "Neon": 0.1924,
-    "Neon|F": 0.1985,
-    "Neon|R": 0.1974,
-    "Neon|FR": 0.2025,
-    "Mega": 0.83,
-    "Mega|F": 0.83,
-    "Mega|R": 0.83,
-    "Mega|FR": 0.83
+    "Base": 0.039,
+    "F": 0.045,
+    "R": 0.044,
+    "FR": 0.0485,
+    "Neon": 0.1853,
+    "Neon|F": 0.1911,
+    "Neon|R": 0.1901,
+    "Neon|FR": 0.195,
+    "Mega": 0.8,
+    "Mega|F": 0.8,
+    "Mega|R": 0.8,
+    "Mega|FR": 0.8
    }
   },
   "682b2cb9623c4b2f9976d16c": {
@@ -13956,18 +13956,18 @@
    "origin": "Halloween Event (2019)",
    "lastUpdatedAt": "$D2026-10-25T15:48:53.801Z",
    "amvggCardVariants": {
-    "Base": 0.047,
-    "F": 0.051,
-    "R": 0.05,
-    "FR": 0.0525,
-    "Neon": 0.2,
-    "Neon|F": 0.197,
-    "Neon|R": 0.196,
-    "Neon|FR": 0.2,
-    "Mega": 0.8331,
-    "Mega|F": 0.775,
-    "Mega|R": 0.775,
-    "Mega|FR": 0.775
+    "Base": 0.045,
+    "F": 0.049,
+    "R": 0.048,
+    "FR": 0.05,
+    "Neon": 0.19,
+    "Neon|F": 0.1872,
+    "Neon|R": 0.1862,
+    "Neon|FR": 0.19,
+    "Mega": 0.8062,
+    "Mega|F": 0.75,
+    "Mega|R": 0.75,
+    "Mega|FR": 0.75
    }
   },
   "64c5e8bce4b5a4535e9f65ab": {
@@ -14041,18 +14041,18 @@
    "origin": "Golden Wheat",
    "lastUpdatedAt": "$D2026-10-27T15:04:49.153Z",
    "amvggCardVariants": {
-    "Base": 0.083,
-    "F": 0.09,
-    "R": 0.088,
-    "FR": 0.0925,
-    "Neon": 0.3552,
-    "Neon|F": 0.3645,
-    "Neon|R": 0.3626,
-    "Neon|FR": 0.37,
-    "Mega": 1.5,
-    "Mega|F": 1.5,
-    "Mega|R": 1.5,
-    "Mega|FR": 1.5
+    "Base": 0.079,
+    "F": 0.085,
+    "R": 0.083,
+    "FR": 0.0875,
+    "Neon": 0.336,
+    "Neon|F": 0.3448,
+    "Neon|R": 0.343,
+    "Neon|FR": 0.35,
+    "Mega": 1.425,
+    "Mega|F": 1.425,
+    "Mega|R": 1.425,
+    "Mega|FR": 1.425
    }
   },
   "64d08c50db2c31fb9880f4df": {
@@ -14703,18 +14703,18 @@
    "origin": "Golden Clam",
    "lastUpdatedAt": "$D2026-10-27T15:09:33.385Z",
    "amvggCardVariants": {
-    "Base": 0.038,
-    "F": 0.044,
-    "R": 0.043,
-    "FR": 0.048,
-    "Neon": 0.1829,
-    "Neon|F": 0.1887,
-    "Neon|R": 0.1877,
-    "Neon|FR": 0.1925,
-    "Mega": 0.79,
-    "Mega|F": 0.79,
-    "Mega|R": 0.79,
-    "Mega|FR": 0.79
+    "Base": 0.036,
+    "F": 0.042,
+    "R": 0.041,
+    "FR": 0.0455,
+    "Neon": 0.1734,
+    "Neon|F": 0.1788,
+    "Neon|R": 0.1779,
+    "Neon|FR": 0.1825,
+    "Mega": 0.75,
+    "Mega|F": 0.75,
+    "Mega|R": 0.75,
+    "Mega|FR": 0.75
    }
   },
   "64c5e7d2e4b5a4535e9f65a8": {
@@ -15235,18 +15235,18 @@
    "origin": "Halloween Event (2022)",
    "lastUpdatedAt": "$D2026-10-27T14:54:39.309Z",
    "amvggCardVariants": {
-    "Base": 0.333,
-    "F": 0.337,
-    "R": 0.335,
-    "FR": 0.34,
-    "Neon": 0.9,
-    "Neon|F": 0.9,
-    "Neon|R": 0.9,
-    "Neon|FR": 0.9,
-    "Mega": 3.6225,
-    "Mega|F": 3.45,
-    "Mega|R": 3.45,
-    "Mega|FR": 3.45
+    "Base": 0.314,
+    "F": 0.317,
+    "R": 0.315,
+    "FR": 0.32,
+    "Neon": 0.85,
+    "Neon|F": 0.85,
+    "Neon|R": 0.85,
+    "Neon|FR": 0.85,
+    "Mega": 3.465,
+    "Mega|F": 3.3,
+    "Mega|R": 3.3,
+    "Mega|FR": 3.3
    }
   },
   "64c5be0e2ecb6add46f2469c": {
@@ -15589,18 +15589,18 @@
    "origin": "UGC Event",
    "lastUpdatedAt": "$D2026-10-27T15:21:43.546Z",
    "amvggCardVariants": {
-    "Base": 0.036,
-    "F": 0.041,
-    "R": 0.041,
-    "FR": 0.045,
-    "Neon": 0.171,
-    "Neon|F": 0.1764,
-    "Neon|R": 0.1755,
-    "Neon|FR": 0.18,
-    "Mega": 0.74,
-    "Mega|F": 0.74,
-    "Mega|R": 0.74,
-    "Mega|FR": 0.74
+    "Base": 0.037,
+    "F": 0.043,
+    "R": 0.042,
+    "FR": 0.0465,
+    "Neon": 0.1781,
+    "Neon|F": 0.1838,
+    "Neon|R": 0.1828,
+    "Neon|FR": 0.1875,
+    "Mega": 0.77,
+    "Mega|F": 0.77,
+    "Mega|R": 0.77,
+    "Mega|FR": 0.77
    }
   },
   "64e1a321d47bc0853843212b": {
@@ -15785,18 +15785,18 @@
    "origin": "Halloween Event (2023)",
    "lastUpdatedAt": "$D2026-10-27T15:12:32.032Z",
    "amvggCardVariants": {
-    "Base": 0.013,
-    "F": 0.015,
-    "R": 0.014,
-    "FR": 0.018,
-    "Neon": 0.0616,
-    "Neon|F": 0.0674,
-    "Neon|R": 0.0653,
-    "Neon|FR": 0.0725,
-    "Mega": 0.2755,
-    "Mega|F": 0.2856,
-    "Mega|R": 0.2799,
-    "Mega|FR": 0.29
+    "Base": 0.0119,
+    "F": 0.0145,
+    "R": 0.0136,
+    "FR": 0.017,
+    "Neon": 0.0578,
+    "Neon|F": 0.0632,
+    "Neon|R": 0.0612,
+    "Neon|FR": 0.068,
+    "Mega": 0.2613,
+    "Mega|F": 0.2709,
+    "Mega|R": 0.2654,
+    "Mega|FR": 0.275
    }
   },
   "655f191502d07691dfd3f330": {
@@ -16655,18 +16655,18 @@
    "origin": "Winter Holiday (2021)",
    "lastUpdatedAt": "$D2026-10-27T15:23:19.508Z",
    "amvggCardVariants": {
-    "Base": 0.017,
-    "F": 0.02,
+    "Base": 0.018,
+    "F": 0.021,
     "R": 0.02,
-    "FR": 0.023,
-    "Neon": 0.0814,
-    "Neon|F": 0.0879,
-    "Neon|R": 0.086,
-    "Neon|FR": 0.0925,
-    "Mega": 0.3589,
-    "Mega|F": 0.3663,
-    "Mega|R": 0.3626,
-    "Mega|FR": 0.37
+    "FR": 0.0235,
+    "Neon": 0.0836,
+    "Neon|F": 0.0903,
+    "Neon|R": 0.0884,
+    "Neon|FR": 0.095,
+    "Mega": 0.3686,
+    "Mega|F": 0.3762,
+    "Mega|R": 0.3724,
+    "Mega|FR": 0.38
    }
   },
   "64f1ec047196b4eb039ac0a0": {
@@ -18371,18 +18371,18 @@
    "origin": "Halloween Event (2025",
    "lastUpdatedAt": "$D2026-10-27T15:06:39.519Z",
    "amvggCardVariants": {
-    "Base": 0.056,
-    "F": 0.061,
-    "R": 0.059,
-    "FR": 0.0625,
-    "Neon": 0.168,
-    "Neon|F": 0.1724,
-    "Neon|R": 0.1715,
-    "Neon|FR": 0.175,
-    "Mega": 0.7,
-    "Mega|F": 0.7,
-    "Mega|R": 0.7,
-    "Mega|FR": 0.7
+    "Base": 0.054,
+    "F": 0.058,
+    "R": 0.057,
+    "FR": 0.06,
+    "Neon": 0.1632,
+    "Neon|F": 0.1675,
+    "Neon|R": 0.1666,
+    "Neon|FR": 0.17,
+    "Mega": 0.68,
+    "Mega|F": 0.68,
+    "Mega|R": 0.68,
+    "Mega|FR": 0.68
    }
   },
   "68e00ac85ddab6f21778bbb0": {
@@ -20143,18 +20143,18 @@
    "origin": "Admin Abuse Egg",
    "lastUpdatedAt": "$D2026-10-27T15:17:35.166Z",
    "amvggCardVariants": {
-    "Base": 0.031,
-    "F": 0.036,
-    "R": 0.035,
-    "FR": 0.039,
-    "Neon": 0.1496,
-    "Neon|F": 0.1544,
-    "Neon|R": 0.1536,
-    "Neon|FR": 0.1575,
-    "Mega": 0.65,
-    "Mega|F": 0.65,
-    "Mega|R": 0.65,
-    "Mega|FR": 0.65
+    "Base": 0.03,
+    "F": 0.035,
+    "R": 0.034,
+    "FR": 0.0375,
+    "Neon": 0.1425,
+    "Neon|F": 0.147,
+    "Neon|R": 0.1463,
+    "Neon|FR": 0.15,
+    "Mega": 0.625,
+    "Mega|F": 0.625,
+    "Mega|R": 0.625,
+    "Mega|FR": 0.625
    }
   },
   "69b42881fc680d64e0e86b16": {
@@ -20357,18 +20357,18 @@
    "origin": "Sugar Festival Event (2026)",
    "lastUpdatedAt": "$D2026-10-27T15:11:32.011Z",
    "amvggCardVariants": {
-    "Base": 0.019,
-    "F": 0.022,
+    "Base": 0.02,
+    "F": 0.023,
     "R": 0.022,
-    "FR": 0.025,
-    "Neon": 0.088,
-    "Neon|F": 0.095,
-    "Neon|R": 0.093,
-    "Neon|FR": 0.1,
-    "Mega": 0.388,
-    "Mega|F": 0.396,
-    "Mega|R": 0.392,
-    "Mega|FR": 0.4
+    "FR": 0.026,
+    "Neon": 0.0924,
+    "Neon|F": 0.0997,
+    "Neon|R": 0.0977,
+    "Neon|FR": 0.105,
+    "Mega": 0.4123,
+    "Mega|F": 0.4208,
+    "Mega|R": 0.4165,
+    "Mega|FR": 0.425
    }
   },
   "69c69c1ad677162ac1d6e721": {
@@ -21824,18 +21824,18 @@
    "_category": "Pets",
    "lastUpdatedAt": "$D2026-10-27T14:59:16.106Z",
    "amvggCardVariants": {
-    "Base": 0.192,
-    "F": 0.195,
-    "R": 0.194,
-    "FR": 0.1975,
-    "Neon": 0.79,
-    "Neon|F": 0.79,
-    "Neon|R": 0.79,
-    "Neon|FR": 0.79,
-    "Mega": 3.2,
-    "Mega|F": 3.2,
-    "Mega|R": 3.2,
-    "Mega|FR": 3.2
+    "Base": 0.201,
+    "F": 0.204,
+    "R": 0.203,
+    "FR": 0.2075,
+    "Neon": 0.83,
+    "Neon|F": 0.83,
+    "Neon|R": 0.83,
+    "Neon|FR": 0.83,
+    "Mega": 3.35,
+    "Mega|F": 3.35,
+    "Mega|R": 3.35,
+    "Mega|FR": 3.35
    }
   },
   "6a88b6e827f127cc0e890e04": {
@@ -22953,7 +22953,7 @@
   "64ccea262446bd991c4ed3c3": {
    "id": "64ccea262446bd991c4ed3c3",
    "name": "Fool Egg",
-   "value": "0.004",
+   "value": "0.005",
    "demand": "Medium",
    "_category": "Eggs",
    "lastUpdatedAt": "$D2026-08-05T21:13:22.060Z"
