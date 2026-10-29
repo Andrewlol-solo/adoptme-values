@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-28T22:04:38+00:00",
+ "updated": "2026-10-29T04:04:37+00:00",
  "items": {
   "64c48cd3137ba4f492f3aff1": {
    "id": "64c48cd3137ba4f492f3aff1",
@@ -22924,7 +22924,7 @@
    "value": "1.4",
    "demand": "Medium",
    "_category": "Eggs",
-   "lastUpdatedAt": "$D2026-10-23T14:40:59.823Z"
+   "lastUpdatedAt": "$D2026-10-26T16:06:07.949Z"
   },
   "67f0ab9dabae89b678a25c94": {
    "id": "67f0ab9dabae89b678a25c94",
@@ -22956,7 +22956,7 @@
    "value": "0.005",
    "demand": "Medium",
    "_category": "Eggs",
-   "lastUpdatedAt": "$D2026-08-05T21:13:22.060Z"
+   "lastUpdatedAt": "$D2026-10-28T14:06:54.060Z"
   },
   "64cbbca52446bd991c4ed3b5": {
    "id": "64cbbca52446bd991c4ed3b5",
@@ -23540,7 +23540,7 @@
    "value": "11",
    "demand": "Medium",
    "_category": "Toys",
-   "lastUpdatedAt": "$D2026-10-16T13:15:11.324Z"
+   "lastUpdatedAt": "$D2026-10-27T15:40:21.704Z"
   },
   "6853150ff8879759774dcc42": {
    "id": "6853150ff8879759774dcc42",
@@ -24460,7 +24460,7 @@
    "value": "0.05",
    "demand": "Medium",
    "_category": "Food",
-   "lastUpdatedAt": "$D2026-10-03T15:13:37.787Z"
+   "lastUpdatedAt": "$D2026-10-26T15:49:49.067Z"
   },
   "683ddc5408e3d3b12d3803d9": {
    "id": "683ddc5408e3d3b12d3803d9",
