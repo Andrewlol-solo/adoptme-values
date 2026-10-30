@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-30T19:04:40+00:00",
+ "updated": "2026-10-30T22:04:47+00:00",
  "items": {
   "64c48cd3137ba4f492f3aff1": {
    "id": "64c48cd3137ba4f492f3aff1",
@@ -15233,7 +15233,7 @@
    "megaDemand": "Medium",
    "_category": "Pets",
    "origin": "Halloween Event (2022)",
-   "lastUpdatedAt": "$D2026-10-30T15:20:26.389Z",
+   "lastUpdatedAt": "$D2026-10-30T18:36:33.442Z",
    "amvggCardVariants": {
     "Base": 0.281,
     "F": 0.286,
@@ -17623,7 +17623,7 @@
    "megaDemand": "Medium",
    "_category": "Pets",
    "origin": "Día De Los Muertos Event (2024)",
-   "lastUpdatedAt": "$D2026-10-30T15:20:51.087Z",
+   "lastUpdatedAt": "$D2026-10-30T18:36:33.442Z",
    "amvggCardVariants": {
     "Base": 0.252,
     "F": 0.256,
@@ -21822,7 +21822,7 @@
    "neonDemand": "High",
    "megaDemand": "High",
    "_category": "Pets",
-   "lastUpdatedAt": "$D2026-10-30T16:02:37.383Z",
+   "lastUpdatedAt": "$D2026-10-30T18:36:33.442Z",
    "amvggCardVariants": {
     "Base": 0.202,
     "F": 0.211,
@@ -22924,7 +22924,7 @@
    "value": "1.45",
    "demand": "Medium",
    "_category": "Eggs",
-   "lastUpdatedAt": "$D2026-10-26T16:06:07.949Z"
+   "lastUpdatedAt": "$D2026-10-30T16:21:47.256Z"
   },
   "67f0ab9dabae89b678a25c94": {
    "id": "67f0ab9dabae89b678a25c94",
@@ -23540,7 +23540,7 @@
    "value": "11.4",
    "demand": "Medium",
    "_category": "Toys",
-   "lastUpdatedAt": "$D2026-10-27T15:40:21.704Z"
+   "lastUpdatedAt": "$D2026-10-30T16:21:31.572Z"
   },
   "6853150ff8879759774dcc42": {
    "id": "6853150ff8879759774dcc42",
@@ -24740,7 +24740,7 @@
    "value": "2.4",
    "demand": "Medium",
    "_category": "Vehicles",
-   "lastUpdatedAt": "$D2026-10-25T16:25:18.122Z"
+   "lastUpdatedAt": "$D2026-10-30T16:22:56.467Z"
   },
   "6874881f482a5d99a3df6aa8": {
    "id": "6874881f482a5d99a3df6aa8",
