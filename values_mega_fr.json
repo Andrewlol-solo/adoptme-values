@@ -1,6 +1,6 @@
 {
  "variant_key": "Mega|FR",
- "updated": "2026-10-31T16:04:38+00:00",
+ "updated": "2026-10-31T19:04:44+00:00",
  "categories": {
   "Gifts": {
    "1000 Bucks Silk Bag": 0.007,
@@ -98,7 +98,7 @@
    "Bandicoot": 0.02,
    "Basilisk": 0.04,
    "Bat": 0.025,
-   "Bat Dragon": 36.5,
+   "Bat Dragon": 36.25,
    "Bauble Buddies": 0.045,
    "Beaver": 0.01,
    "Bee": 0.03,
@@ -567,6 +567,7 @@
    "Ox": 0.02,
    "Pain au Chat": 0.09,
    "Panda": 0.12,
+   "Pandaguin Glooptodog": 0.02,
    "Pangolin": 0.013,
    "Papa Moose": 0.775,
    "Parakeet": 0.011,
