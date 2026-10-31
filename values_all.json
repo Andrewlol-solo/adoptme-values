@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-31T19:04:44+00:00",
+ "updated": "2026-10-31T22:04:45+00:00",
  "items": {
   "64c48cd3137ba4f492f3aff1": {
    "id": "64c48cd3137ba4f492f3aff1",
@@ -18292,7 +18292,7 @@
    "neonValue": "3.8",
    "npNeonValue": "3.825",
    "megaValue": "15",
-   "npMegaValue": "15.2",
+   "npMegaValue": "15.3",
    "regularDemand": "Medium",
    "npRegularDemand": "Medium",
    "neonDemand": "Medium",
@@ -18323,7 +18323,7 @@
     "Neon|F": 3.8,
     "Neon|R": 3.8,
     "Neon|FR": 3.8,
-    "Mega": 15.2,
+    "Mega": 15.3,
     "Mega|F": 15.0,
     "Mega|R": 15.0,
     "Mega|FR": 15.0
