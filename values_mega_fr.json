@@ -1,6 +1,6 @@
 {
  "variant_key": "Mega|FR",
- "updated": "2026-11-02T16:04:46+00:00",
+ "updated": "2026-11-02T19:04:47+00:00",
  "categories": {
   "Gifts": {
    "1000 Bucks Silk Bag": 0.007,
@@ -193,7 +193,7 @@
    "Chocolate Chow-Chow": 0.09,
    "Chocolate Dutch Guinea Pig": 0.21,
    "Chocolate Labrador": 0.009,
-   "Christmas Pudding Pup": 0.98,
+   "Christmas Pudding Pup": 1.0,
    "Christmas Spirit": 0.04,
    "Classic Teapot": 0.025,
    "Clementine Owl": 0.035,
@@ -316,7 +316,7 @@
    "Gargoyle": 0.13,
    "Gecko": 0.065,
    "Gecko Ducky": 0.01,
-   "General Sheepdog": 0.07,
+   "General Sheepdog": 0.06,
    "German Shepherd": 0.14,
    "Ghost": 0.025,
    "Ghost Bunny": 0.15,
@@ -721,7 +721,7 @@
    "Snorgle": 0.02,
    "Snow Cat": 0.009,
    "Snow Leopard": 0.04,
-   "Snow Monkey": 0.39,
+   "Snow Monkey": 0.4,
    "Snow Owl": 0.1,
    "Snow Puma": 0.01,
    "Snowball Pet": 0.09,
