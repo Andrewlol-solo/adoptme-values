@@ -525,6 +525,62 @@ def old_total():
         return 0
 
 
+def make_daily_trends(items, stamp):
+    """Compare FR pet prices with the previous UTC-day snapshot.
+
+    The compact snapshot lives inside values_all.json so it survives the GitHub
+    publish and executor download. It is rotated at most once per UTC date.
+    """
+    today = stamp[:10]
+    previous_payload = {}
+    try:
+        with open(ALL_FILE, encoding="utf-8") as f:
+            previous_payload = json.load(f)
+    except (OSError, json.JSONDecodeError):
+        pass
+
+    snapshot = previous_payload.get("trendSnapshot")
+    if not isinstance(snapshot, dict) or not isinstance(snapshot.get("prices"), dict):
+        snapshot = {"date": today, "prices": {}}
+        for item in items.values():
+            if item.get("_category") != "Pets" or not isinstance(item.get("name"), str):
+                continue
+            price = pick(item, VARIANTS[3][2])
+            if price is not None:
+                snapshot["prices"][item["name"]] = price
+        return {}, snapshot, snapshot["date"], stamp
+
+    baseline_date = str(snapshot.get("date") or today)
+    baseline_prices = snapshot["prices"]
+    if baseline_date == today:
+        existing_trends = previous_payload.get("trends1d")
+        if isinstance(existing_trends, dict):
+            return existing_trends, snapshot, str(previous_payload.get("trendBaselineDate") or baseline_date), str(previous_payload.get("trendUpdated") or stamp)
+    trends = {}
+    for item in items.values():
+        name = item.get("name")
+        if item.get("_category") != "Pets" or not isinstance(name, str):
+            continue
+        old_price = to_num(baseline_prices.get(name))
+        new_price = pick(item, VARIANTS[3][2])
+        if old_price is None or old_price <= 0 or new_price is None:
+            continue
+        percent = ((new_price - old_price) / old_price) * 100
+        trends[name] = round(percent, 4)
+
+    if baseline_date != today:
+        next_snapshot = {"date": today, "prices": {}}
+        for item in items.values():
+            if item.get("_category") != "Pets" or not isinstance(item.get("name"), str):
+                continue
+            price = pick(item, VARIANTS[3][2])
+            if price is not None:
+                next_snapshot["prices"][item["name"]] = price
+        snapshot = next_snapshot
+
+    return trends, snapshot, baseline_date, stamp
+
+
 def main():
     os.chdir(SCRIPT_DIR)
     try:
@@ -623,8 +679,12 @@ def main():
 
     verified_pet_count = verify_pet_variant_projection(items, variant_outputs)
     stamp = datetime.now(timezone.utc).isoformat(timespec="seconds")
+    trends, trend_snapshot, baseline_date, trend_updated = make_daily_trends(items, stamp)
     with open(ALL_FILE, "w", encoding="utf-8") as f:
-        json.dump({"updated": stamp, "items": items}, f, ensure_ascii=False, indent=1)
+        json.dump({"updated": stamp, "items": items, "trends1d": trends,
+                   "trendBaselineDate": baseline_date, "trendUpdated": trend_updated,
+                   "trendSnapshot": trend_snapshot}, f, ensure_ascii=False, indent=1)
+    print(f"Дневные тренды: {len(trends)} питомцев; снимок от {baseline_date}.")
 
     for fname, _, _ in VARIANTS:
         vkey, cats = variant_outputs[fname]
