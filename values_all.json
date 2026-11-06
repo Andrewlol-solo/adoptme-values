@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-06T13:04:45+00:00",
+ "updated": "2026-11-06T16:04:51+00:00",
  "items": {
   "64c48cd3137ba4f492f3aff1": {
    "id": "64c48cd3137ba4f492f3aff1",
@@ -843,7 +843,7 @@
    "megaDemand": "Medium",
    "_category": "Pets",
    "origin": "Winter Festival (2023)",
-   "lastUpdatedAt": "$D2026-11-05T15:34:21.597Z",
+   "lastUpdatedAt": "$D2026-11-06T12:41:52.802Z",
    "amvggCardVariants": {
     "Base": 0.046,
     "F": 0.053,
@@ -3092,7 +3092,7 @@
    "fDemand": "High",
    "_category": "Pets",
    "origin": "Winter Festival (2023)",
-   "lastUpdatedAt": "$D2026-11-05T15:58:07.353Z",
+   "lastUpdatedAt": "$D2026-11-06T12:44:11.560Z",
    "amvggCardVariants": {
     "Base": 0.335,
     "F": 0.34,
@@ -7523,7 +7523,7 @@
    "megaDemand": "Medium",
    "_category": "Pets",
    "origin": "Winter Festival (2024)",
-   "lastUpdatedAt": "$D2026-11-05T15:59:15.639Z",
+   "lastUpdatedAt": "$D2026-11-06T12:41:31.779Z",
    "amvggCardVariants": {
     "Base": 0.196,
     "F": 0.199,
@@ -10269,7 +10269,7 @@
    "megaDemand": "Medium",
    "_category": "Pets",
    "origin": "Lunar New Year (2025)",
-   "lastUpdatedAt": "$D2026-11-03T15:16:53.660Z",
+   "lastUpdatedAt": "$D2026-11-06T12:54:32.048Z",
    "amvggCardVariants": {
     "Base": 0.818,
     "F": 0.826,
@@ -12105,7 +12105,7 @@
    "megaDemand": "Medium",
    "_category": "Pets",
    "origin": "Lunar New Year (2023)",
-   "lastUpdatedAt": "$D2026-11-06T12:33:00.266Z",
+   "lastUpdatedAt": "$D2026-11-06T12:52:23.220Z",
    "amvggCardVariants": {
     "Base": 0.081,
     "F": 0.088,
@@ -15587,7 +15587,7 @@
    "megaDemand": "Medium",
    "_category": "Pets",
    "origin": "UGC Event",
-   "lastUpdatedAt": "$D2026-11-05T15:53:46.196Z",
+   "lastUpdatedAt": "$D2026-11-06T12:42:22.985Z",
    "amvggCardVariants": {
     "Base": 0.038,
     "F": 0.044,
@@ -16345,7 +16345,7 @@
    "fDemand": "High",
    "_category": "Pets",
    "origin": "Winter Event (2022)",
-   "lastUpdatedAt": "$D2026-11-05T15:57:48.825Z",
+   "lastUpdatedAt": "$D2026-11-06T12:43:55.077Z",
    "amvggCardVariants": {
     "Base": 0.339,
     "F": 0.345,
@@ -18695,7 +18695,7 @@
    "mfDemand": "Medium",
    "_category": "Pets",
    "origin": "Halloween Event (2025)",
-   "lastUpdatedAt": "$D2026-11-06T12:20:02.859Z",
+   "lastUpdatedAt": "$D2026-11-06T12:41:37.432Z",
    "amvggCardVariants": {
     "Base": 0.775,
     "F": 0.78,
@@ -18919,7 +18919,7 @@
    "megaDemand": "Medium",
    "_category": "Pets",
    "origin": "Winter Event (2025)",
-   "lastUpdatedAt": "$D2026-11-05T15:40:18.892Z",
+   "lastUpdatedAt": "$D2026-11-06T12:41:14.846Z",
    "amvggCardVariants": {
     "Base": 0.044,
     "F": 0.051,
@@ -22828,7 +22828,7 @@
   "64cbbdc82446bd991c4ed3bb": {
    "id": "64cbbdc82446bd991c4ed3bb",
    "name": "Jungle Egg",
-   "value": "0.49",
+   "value": "0.5",
    "demand": "Medium",
    "_category": "Eggs",
    "lastUpdatedAt": "$D2026-11-06T12:55:50.649Z"
@@ -22948,7 +22948,7 @@
   "64cbbe5e2446bd991c4ed3bd": {
    "id": "64cbbe5e2446bd991c4ed3bd",
    "name": "Safari Egg",
-   "value": "1.45",
+   "value": "1.5",
    "demand": "Medium",
    "_category": "Eggs",
    "lastUpdatedAt": "$D2026-11-06T12:55:44.186Z"
@@ -23012,7 +23012,7 @@
   "64cbbd122446bd991c4ed3b8": {
    "id": "64cbbd122446bd991c4ed3b8",
    "name": "Farm Egg",
-   "value": "0.46",
+   "value": "0.47",
    "demand": "Medium",
    "_category": "Eggs",
    "lastUpdatedAt": "$D2026-11-06T12:55:59.951Z"
@@ -23564,7 +23564,7 @@
   "64d44b63110e894cb96c268a": {
    "id": "64d44b63110e894cb96c268a",
    "name": "Rainbow Rattle",
-   "value": "11.4",
+   "value": "11.75",
    "demand": "Medium",
    "_category": "Toys",
    "lastUpdatedAt": "$D2026-11-06T12:56:23.472Z"
@@ -24764,7 +24764,7 @@
   "64e5d94cdba250a806f0e0ca": {
    "id": "64e5d94cdba250a806f0e0ca",
    "name": "Neon Black Scooter",
-   "value": "2.4",
+   "value": "2.5",
    "demand": "Medium",
    "_category": "Vehicles",
    "lastUpdatedAt": "$D2026-10-30T16:22:56.467Z"
@@ -26661,7 +26661,7 @@
    "id": "68281a61623c4b2f9976d163",
    "name": "Easter Egg Stroller",
    "value": "0.0125",
-   "demand": "Medium",
+   "demand": "Low",
    "_category": "Strollers",
    "lastUpdatedAt": "$D2026-10-01T12:00:25.425Z"
   },
@@ -26693,7 +26693,7 @@
    "id": "681f01a1e86a204e8bb964ac",
    "name": "Baby Basket Stroller",
    "value": "0.014",
-   "demand": "Medium",
+   "demand": "Low",
    "_category": "Strollers",
    "lastUpdatedAt": "$D2026-08-30T13:57:07.433Z"
   },
@@ -26709,7 +26709,7 @@
    "id": "6822ab67623c4b2f9976d160",
    "name": "Bunny Stroller",
    "value": "0.013",
-   "demand": "Medium",
+   "demand": "Low",
    "_category": "Strollers",
    "lastUpdatedAt": "$D2026-10-01T12:00:25.425Z"
   },
@@ -26717,7 +26717,7 @@
    "id": "684d4e5df8879759774dcbf8",
    "name": "Half Egg Stroller",
    "value": "0.0125",
-   "demand": "Medium",
+   "demand": "Low",
    "_category": "Strollers",
    "lastUpdatedAt": "$D2026-10-01T12:00:25.425Z"
   },
@@ -26725,7 +26725,7 @@
    "id": "6851b426f8879759774dcc3d",
    "name": "Race Car Stroller",
    "value": "0.0175",
-   "demand": "Medium",
+   "demand": "Low",
    "_category": "Strollers",
    "lastUpdatedAt": "$D2025-12-03T20:49:28.581Z"
   },
@@ -26733,7 +26733,7 @@
    "id": "6822ab76623c4b2f9976d161",
    "name": "Rainbow Stroller",
    "value": "0.008",
-   "demand": "Medium",
+   "demand": "Low",
    "_category": "Strollers",
    "lastUpdatedAt": "$D2026-10-10T11:23:06.977Z"
   },
@@ -26789,7 +26789,7 @@
    "id": "65cf94587ca8946035cc5729",
    "name": "Vampire Stroller",
    "value": "0.02",
-   "demand": "Medium",
+   "demand": "Low",
    "_category": "Strollers",
    "lastUpdatedAt": "$D2025-12-03T20:48:07.361Z"
   },
@@ -26829,7 +26829,7 @@
    "id": "6822ab31623c4b2f9976d15e",
    "name": "Unicorn Stroller",
    "value": "0.015",
-   "demand": "Medium",
+   "demand": "Low",
    "_category": "Strollers",
    "lastUpdatedAt": "$D2025-12-03T20:51:06.795Z"
   },
@@ -26837,7 +26837,7 @@
    "id": "684d8ba0f8879759774dcc09",
    "name": "Floating Hand Stroller",
    "value": "0.0125",
-   "demand": "Medium",
+   "demand": "Low",
    "_category": "Strollers",
    "lastUpdatedAt": "$D2025-12-03T20:54:07.118Z"
   },
@@ -27085,7 +27085,7 @@
    "id": "6aca240727f127cc0e89179b",
    "name": "Airplane Stroller",
    "value": "0.015",
-   "demand": "Medium",
+   "demand": "Low",
    "_category": "Strollers",
    "lastUpdatedAt": "$D2026-10-10T11:39:51.157Z"
   },
@@ -27580,7 +27580,7 @@
   "68207ac5e86a204e8bb964ad": {
    "id": "68207ac5e86a204e8bb964ad",
    "name": "Tiny Wings",
-   "value": "0.065",
+   "value": "0.066",
    "demand": "High",
    "_category": "Petwear",
    "lastUpdatedAt": "$D2026-11-06T12:57:22.170Z"
@@ -27708,7 +27708,7 @@
   "65d9b702412a333b3bd41390": {
    "id": "65d9b702412a333b3bd41390",
    "name": "Rainbow Maker",
-   "value": "0.39",
+   "value": "0.395",
    "demand": "High",
    "_category": "Petwear",
    "lastUpdatedAt": "$D2026-11-06T12:56:47.577Z"
@@ -27916,7 +27916,7 @@
   "66f9649b0932eb0782f3e0c7": {
    "id": "66f9649b0932eb0782f3e0c7",
    "name": "Unicorn Horn",
-   "value": "0.13",
+   "value": "0.1325",
    "demand": "High",
    "_category": "Petwear",
    "lastUpdatedAt": "$D2026-11-06T12:57:14.319Z"
@@ -28820,7 +28820,7 @@
   "6a6f727041eb96d506309d88": {
    "id": "6a6f727041eb96d506309d88",
    "name": "Panda Cap",
-   "value": "7",
+   "value": "7.25",
    "demand": "Medium",
    "_category": "Petwear",
    "lastUpdatedAt": "$D2026-11-06T12:56:35.667Z"
