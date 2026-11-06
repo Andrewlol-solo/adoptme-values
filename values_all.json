@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-06T16:04:51+00:00",
+ "updated": "2026-11-06T19:04:36+00:00",
  "items": {
   "64c48cd3137ba4f492f3aff1": {
    "id": "64c48cd3137ba4f492f3aff1",
@@ -24767,7 +24767,7 @@
    "value": "2.5",
    "demand": "Medium",
    "_category": "Vehicles",
-   "lastUpdatedAt": "$D2026-10-30T16:22:56.467Z"
+   "lastUpdatedAt": "$D2026-11-06T12:57:00.427Z"
   },
   "6874881f482a5d99a3df6aa8": {
    "id": "6874881f482a5d99a3df6aa8",
@@ -26663,7 +26663,7 @@
    "value": "0.0125",
    "demand": "Low",
    "_category": "Strollers",
-   "lastUpdatedAt": "$D2026-10-01T12:00:25.425Z"
+   "lastUpdatedAt": "$D2026-11-06T14:11:54.687Z"
   },
   "65782628d92336c2891b6524": {
    "id": "65782628d92336c2891b6524",
@@ -26695,7 +26695,7 @@
    "value": "0.014",
    "demand": "Low",
    "_category": "Strollers",
-   "lastUpdatedAt": "$D2026-08-30T13:57:07.433Z"
+   "lastUpdatedAt": "$D2026-11-06T14:11:54.687Z"
   },
   "6822a2e7623c4b2f9976d15a": {
    "id": "6822a2e7623c4b2f9976d15a",
@@ -26711,7 +26711,7 @@
    "value": "0.013",
    "demand": "Low",
    "_category": "Strollers",
-   "lastUpdatedAt": "$D2026-10-01T12:00:25.425Z"
+   "lastUpdatedAt": "$D2026-11-06T14:11:54.687Z"
   },
   "684d4e5df8879759774dcbf8": {
    "id": "684d4e5df8879759774dcbf8",
@@ -26719,7 +26719,7 @@
    "value": "0.0125",
    "demand": "Low",
    "_category": "Strollers",
-   "lastUpdatedAt": "$D2026-10-01T12:00:25.425Z"
+   "lastUpdatedAt": "$D2026-11-06T14:11:54.687Z"
   },
   "6851b426f8879759774dcc3d": {
    "id": "6851b426f8879759774dcc3d",
@@ -26727,7 +26727,7 @@
    "value": "0.0175",
    "demand": "Low",
    "_category": "Strollers",
-   "lastUpdatedAt": "$D2025-12-03T20:49:28.581Z"
+   "lastUpdatedAt": "$D2026-11-06T14:11:54.687Z"
   },
   "6822ab76623c4b2f9976d161": {
    "id": "6822ab76623c4b2f9976d161",
@@ -26735,7 +26735,7 @@
    "value": "0.008",
    "demand": "Low",
    "_category": "Strollers",
-   "lastUpdatedAt": "$D2026-10-10T11:23:06.977Z"
+   "lastUpdatedAt": "$D2026-11-06T14:11:54.687Z"
   },
   "689e5e3f6c38d5e9f6f1370e": {
    "id": "689e5e3f6c38d5e9f6f1370e",
@@ -26791,7 +26791,7 @@
    "value": "0.02",
    "demand": "Low",
    "_category": "Strollers",
-   "lastUpdatedAt": "$D2025-12-03T20:48:07.361Z"
+   "lastUpdatedAt": "$D2026-11-06T14:11:54.687Z"
   },
   "65cf991e7ca8946035cc572a": {
    "id": "65cf991e7ca8946035cc572a",
@@ -26831,7 +26831,7 @@
    "value": "0.015",
    "demand": "Low",
    "_category": "Strollers",
-   "lastUpdatedAt": "$D2025-12-03T20:51:06.795Z"
+   "lastUpdatedAt": "$D2026-11-06T14:11:54.687Z"
   },
   "684d8ba0f8879759774dcc09": {
    "id": "684d8ba0f8879759774dcc09",
@@ -26839,7 +26839,7 @@
    "value": "0.0125",
    "demand": "Low",
    "_category": "Strollers",
-   "lastUpdatedAt": "$D2025-12-03T20:54:07.118Z"
+   "lastUpdatedAt": "$D2026-11-06T14:11:54.687Z"
   },
   "6851b355f8879759774dcc3c": {
    "id": "6851b355f8879759774dcc3c",
@@ -27087,7 +27087,7 @@
    "value": "0.015",
    "demand": "Low",
    "_category": "Strollers",
-   "lastUpdatedAt": "$D2026-10-10T11:39:51.157Z"
+   "lastUpdatedAt": "$D2026-11-06T14:11:54.687Z"
   },
   "6aca24a627f127cc0e89179c": {
    "id": "6aca24a627f127cc0e89179c",
