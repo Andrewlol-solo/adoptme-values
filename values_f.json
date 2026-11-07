@@ -1,6 +1,6 @@
 {
  "variant_key": "F",
- "updated": "2026-11-07T07:04:38+00:00",
+ "updated": "2026-11-07T13:04:43+00:00",
  "categories": {
   "Gifts": {
    "1000 Bucks Silk Bag": 0.007,
@@ -266,6 +266,7 @@
    "Eggnog Hare": 0.0035,
    "Ehecatl": 0.0021,
    "Elasmosaurus": 0.0047,
+   "Electric Hornet": 0.0106,
    "Elephant": 0.102,
    "Emberlight": 0.0056,
    "Emperor Gorilla": 0.058,
@@ -292,6 +293,7 @@
    "Flaming Fox": 0.0136,
    "Flaming Zebra": 0.005,
    "Flamingo": 0.124,
+   "Flash Weasel": 0.433,
    "Fleur De Ice": 0.0049,
    "Floral Eggy": 0.0029,
    "Flower Power Duckling": 0.0052,
@@ -380,6 +382,7 @@
    "Gumball Caterpillar": 0.002,
    "Gummy Guana": 0.0019,
    "Haetae": 0.826,
+   "Haetyphoon": 0.846,
    "Halloween Black Mummy Cat": 0.0021,
    "Halloween Blue Scorpion": 0.0025,
    "Halloween Evil Dachshund": 0.0049,
@@ -776,6 +779,7 @@
    "Therapy Dog": 0.0047,
    "Thorny Devil": 0.0029,
    "Three Blind Mice": 0.0029,
+   "Thunderfisher": 0.0064,
    "Tio De Nadal": 0.137,
    "Toasty Red Panda": 0.0049,
    "Tortoiseshell Guinea Pig": 0.096,
@@ -1543,6 +1547,7 @@
    "Long Ermine Sticker": 0.003,
    "Majestic Pony Sticker": 0.0005,
    "Mermicorn Animated Sticker": 0.009,
+   "Mighty Haetyphoon Animated Sticker": 0.04,
    "Mini Pig Sticker": 0.001,
    "Mochi Meow Tumble Animated Sticker": 0.0055,
    "Naughty Mistletroll Sticker": 0.0005,
