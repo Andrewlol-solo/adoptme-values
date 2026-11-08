@@ -1,6 +1,6 @@
 {
  "variant_key": "Neon|F",
- "updated": "2026-11-07T16:04:46+00:00",
+ "updated": "2026-11-08T01:04:38+00:00",
  "categories": {
   "Gifts": {
    "1000 Bucks Silk Bag": 0.007,
@@ -65,7 +65,7 @@
    "Alpaca": 0.5049,
    "Amami Rabbit": 0.0182,
    "Amber Butterfly": 0.0055,
-   "Amethyst Penguin": 3.45,
+   "Amethyst Penguin": 3.3,
    "Ancient Dragon": 0.0068,
    "Angelfish": 0.006,
    "Angler Fish": 0.0055,
@@ -382,7 +382,7 @@
    "Gumball Caterpillar": 0.0049,
    "Gummy Guana": 0.0038,
    "Haetae": 2.75,
-   "Haetyphoon": 2.975,
+   "Haetyphoon": 2.675,
    "Halloween Black Mummy Cat": 0.0055,
    "Halloween Blue Scorpion": 0.0064,
    "Halloween Evil Dachshund": 0.013,
@@ -799,7 +799,7 @@
    "Turtle Doves": 0.0053,
    "Tuxedo Cat": 0.0329,
    "Undead Elk": 0.0082,
-   "Undead Jousting Horse": 0.9,
+   "Undead Jousting Horse": 0.925,
    "Unicorn": 0.03,
    "Unicorn Ducky": 0.0047,
    "Urchin": 0.0064,
