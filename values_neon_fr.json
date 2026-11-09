@@ -1,6 +1,6 @@
 {
  "variant_key": "Neon|FR",
- "updated": "2026-11-08T22:04:40+00:00",
+ "updated": "2026-11-09T10:04:38+00:00",
  "categories": {
   "Gifts": {
    "1000 Bucks Silk Bag": 0.007,
@@ -266,7 +266,7 @@
    "Eggnog Hare": 0.01,
    "Ehecatl": 0.00675,
    "Elasmosaurus": 0.0125,
-   "Electric Hornet": 0.035,
+   "Electric Hornet": 0.03,
    "Elephant": 0.285,
    "Emberlight": 0.02,
    "Emperor Gorilla": 0.245,
@@ -293,7 +293,7 @@
    "Flaming Fox": 0.065,
    "Flaming Zebra": 0.016,
    "Flamingo": 0.4,
-   "Flash Weasel": 0.95,
+   "Flash Weasel": 0.85,
    "Fleur De Ice": 0.015,
    "Floral Eggy": 0.009,
    "Flower Power Duckling": 0.0175,
@@ -382,7 +382,7 @@
    "Gumball Caterpillar": 0.0065,
    "Gummy Guana": 0.005,
    "Haetae": 2.75,
-   "Haetyphoon": 1.45,
+   "Haetyphoon": 1.05,
    "Halloween Black Mummy Cat": 0.007,
    "Halloween Blue Scorpion": 0.008,
    "Halloween Evil Dachshund": 0.015,
@@ -779,7 +779,7 @@
    "Therapy Dog": 0.0125,
    "Thorny Devil": 0.009,
    "Three Blind Mice": 0.009,
-   "Thunderfisher": 0.02,
+   "Thunderfisher": 0.0175,
    "Tio De Nadal": 0.57,
    "Toasty Red Panda": 0.015,
    "Tortoiseshell Guinea Pig": 0.4,
