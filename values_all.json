@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-09T10:04:38+00:00",
+ "updated": "2026-11-09T13:04:50+00:00",
  "items": {
   "64c48cd3137ba4f492f3aff1": {
    "id": "64c48cd3137ba4f492f3aff1",
@@ -22812,7 +22812,7 @@
    "neonDemand": "Medium",
    "megaDemand": "Medium",
    "_category": "Pets",
-   "lastUpdatedAt": "$D2026-11-08T15:49:06.423Z",
+   "lastUpdatedAt": "$D2026-11-09T08:00:50.157Z",
    "amvggCardVariants": {
     "Base": 0.243,
     "F": 0.246,
@@ -22839,7 +22839,7 @@
    "neonDemand": "Medium",
    "megaDemand": "Medium",
    "_category": "Pets",
-   "lastUpdatedAt": "$D2026-11-08T15:49:50.038Z",
+   "lastUpdatedAt": "$D2026-11-09T08:01:01.089Z",
    "amvggCardVariants": {
     "Base": 0.188,
     "F": 0.196,
@@ -22866,7 +22866,7 @@
    "neonDemand": "Medium",
    "megaDemand": "Medium",
    "_category": "Pets",
-   "lastUpdatedAt": "$D2026-11-08T16:13:19.876Z",
+   "lastUpdatedAt": "$D2026-11-09T08:07:57.596Z",
    "amvggCardVariants": {
     "Base": 0.003,
     "F": 0.0052,
@@ -22893,7 +22893,7 @@
    "neonDemand": "Medium",
    "megaDemand": "Medium",
    "_category": "Pets",
-   "lastUpdatedAt": "$D2026-11-08T16:12:48.071Z",
+   "lastUpdatedAt": "$D2026-11-09T08:06:10.868Z",
    "amvggCardVariants": {
     "Base": 0.006,
     "F": 0.0076,
@@ -30232,7 +30232,7 @@
   "6aeeeae227f127cc0e891e22": {
    "id": "6aeeeae227f127cc0e891e22",
    "name": "Mighty Haetyphoon Animated Sticker",
-   "value": "0.0225",
+   "value": "0.016",
    "demand": "Medium",
    "_category": "Stickers",
    "lastUpdatedAt": "$D2026-11-07T13:11:34.671Z"
